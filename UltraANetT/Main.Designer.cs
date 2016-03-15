@@ -55,6 +55,10 @@
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -78,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollectionLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcMain)).BeginInit();
+            this.pcMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // splashScreenManager
@@ -112,13 +117,18 @@
             this.iCenterTextAlign,
             this.iRightTextAlign,
             this.rgbiSkins,
-            this.barStaticItem1});
+            this.barStaticItem1,
+            this.skinRibbonGalleryBarItem1,
+            this.barMdiChildrenListItem1,
+            this.barHeaderItem1,
+            this.barStaticItem2});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ribbonControl.MaxItemId = 2;
+            this.ribbonControl.MaxItemId = 1;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.barStaticItem1);
+            this.ribbonControl.PageHeaderItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.homeRibbonPage,
             this.helpRibbonPage,
@@ -129,7 +139,7 @@
             this.ribbonPage5,
             this.ribbonPage6});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1099, 155);
+            this.ribbonControl.Size = new System.Drawing.Size(1022, 155);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ItemLinks.Add(this.iSave);
             // 
@@ -195,8 +205,12 @@
             this.iNew.ImageIndex = 0;
             this.iNew.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iNew.ItemAppearance.Hovered.Options.UseFont = true;
+            this.iNew.ItemAppearance.Normal.BackColor = System.Drawing.Color.Transparent;
             this.iNew.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.iNew.ItemAppearance.Normal.Options.UseBackColor = true;
             this.iNew.ItemAppearance.Normal.Options.UseFont = true;
+            this.iNew.ItemAppearance.Pressed.BackColor = System.Drawing.Color.Silver;
+            this.iNew.ItemAppearance.Pressed.Options.UseBackColor = true;
             this.iNew.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iNew.ItemInMenuAppearance.Normal.Options.UseFont = true;
             this.iNew.LargeImageIndex = 0;
@@ -277,6 +291,8 @@
             this.iHelp.ItemAppearance.Hovered.Options.UseFont = true;
             this.iHelp.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.iHelp.ItemAppearance.Normal.Options.UseFont = true;
+            this.iHelp.ItemAppearance.Pressed.BackColor = System.Drawing.Color.Silver;
+            this.iHelp.ItemAppearance.Pressed.Options.UseBackColor = true;
             this.iHelp.LargeImageIndex = 7;
             this.iHelp.LargeWidth = 80;
             this.iHelp.Name = "iHelp";
@@ -300,7 +316,7 @@
             // 
             // siStatus
             // 
-            this.siStatus.Caption = "北京九州讯达科技有限公司 ";
+            this.siStatus.Caption = "主程序版本号：JZXD-20160101-1.0.2.1\r\n";
             this.siStatus.Id = 31;
             this.siStatus.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siStatus.ItemAppearance.Normal.Options.UseFont = true;
@@ -309,7 +325,7 @@
             // 
             // siInfo
             // 
-            this.siInfo.Caption = "版本V1.01";
+            this.siInfo.Caption = "数据库版本号：A2348I\r\n";
             this.siInfo.Id = 32;
             this.siInfo.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siInfo.ItemAppearance.Normal.Options.UseFont = true;
@@ -405,6 +421,35 @@
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 2;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // barMdiChildrenListItem1
+            // 
+            this.barMdiChildrenListItem1.Caption = "barMdiChildrenListItem1";
+            this.barMdiChildrenListItem1.Id = 3;
+            this.barMdiChildrenListItem1.Name = "barMdiChildrenListItem1";
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "123";
+            this.barHeaderItem1.Id = 4;
+            this.barHeaderItem1.Name = "barHeaderItem1";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "检查更新";
+            this.barStaticItem2.Id = 5;
+            this.barStaticItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barStaticItem2.ItemAppearance.Normal.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.barStaticItem2.ItemAppearance.Normal.Options.UseFont = true;
+            this.barStaticItem2.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -430,7 +475,7 @@
             // 
             // fileRibbonPageGroup
             // 
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iNew);
+            this.fileRibbonPageGroup.ItemLinks.Add(this.iNew, true);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iFind);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iSave);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iSaveAs);
@@ -500,11 +545,12 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 829);
+            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 706);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1099, 21);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 21);
             // 
             // navbarImageCollection
             // 
@@ -531,9 +577,10 @@
             // pcMain
             // 
             this.pcMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcMain.Location = new System.Drawing.Point(0, 155);
             this.pcMain.Name = "pcMain";
-            this.pcMain.Size = new System.Drawing.Size(1099, 674);
+            this.pcMain.Size = new System.Drawing.Size(1022, 551);
             this.pcMain.TabIndex = 4;
             // 
             // Main
@@ -542,7 +589,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 850);
+            this.ClientSize = new System.Drawing.Size(1022, 727);
             this.Controls.Add(this.pcMain);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
@@ -552,6 +599,7 @@
             this.Name = "Main";
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;
+            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).EndInit();
@@ -559,6 +607,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcMain)).EndInit();
+            this.pcMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,5 +654,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraEditors.PanelControl pcMain;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private Module.XtraUserControl1 xtraUserControl11;
     }
 }

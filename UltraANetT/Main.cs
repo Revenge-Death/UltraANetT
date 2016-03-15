@@ -56,6 +56,8 @@ namespace UltraANetT
             pcMain.Controls.Clear();
             pcMain.Controls.Add(vc);
             SplashScreenManager.CloseForm();
+            iHelp.ItemAppearance.Normal.BackColor = Color.Transparent;
+            iNew.ItemAppearance.Normal.BackColor = Color.Silver;
         }
 
         private void iHelp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -65,6 +67,16 @@ namespace UltraANetT
             pcMain.Controls.Clear();
             pcMain.Controls.Add(at);
             SplashScreenManager.CloseForm();
+            iNew.ItemAppearance.Normal.BackColor = Color.Transparent;
+            iHelp.ItemAppearance.Normal.BackColor = Color.Silver;
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //VehicelConfig vc = new VehicelConfig();
+            //pcMain.Controls.Clear();
+            //pcMain.Controls.Add(vc);
+            //iNew.ItemAppearance.Normal.BackColor = Color.Silver;
         }
     }
 }

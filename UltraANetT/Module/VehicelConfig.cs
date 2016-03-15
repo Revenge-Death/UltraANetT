@@ -15,7 +15,8 @@ namespace UltraANetT.Module
         public VehicelConfig()
         {
             InitializeComponent();
-
+            InitGrid();
+         
         }
 
         private void InitGrid()
@@ -43,6 +44,11 @@ namespace UltraANetT.Module
         private void vehicelTree_MouseDown(object sender, MouseEventArgs e)
         {
            
+        }
+
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

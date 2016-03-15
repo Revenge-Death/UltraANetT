@@ -43,9 +43,11 @@
             this.calendarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.tasksItem = new DevExpress.XtraNavBar.NavBarItem();
             this.imageCollection = new DevExpress.Utils.ImageCollection(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit = new DevExpress.XtraEditors.PictureEdit();
+            this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -80,6 +82,8 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemPictureEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.repositoryItemImageEdit = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -89,8 +93,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
@@ -106,20 +112,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.comboBoxEdit2);
             this.splitContainerControl1.Panel1.Controls.Add(this.comboBoxEdit3);
             this.splitContainerControl1.Panel1.Controls.Add(this.comboBoxEdit1);
             this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.panel2);
             this.splitContainerControl1.Panel2.Controls.Add(this.panel1);
             this.splitContainerControl1.Panel2.Controls.Add(this.simpleButton1);
             this.splitContainerControl1.Panel2.Controls.Add(this.labelControl11);
@@ -144,7 +150,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.textEdit2);
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1099, 674);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1022, 551);
             this.splitContainerControl1.SplitterPosition = 225;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -215,7 +221,7 @@
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 221;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.ExplorerBar;
-            this.navBarControl.Size = new System.Drawing.Size(221, 581);
+            this.navBarControl.Size = new System.Drawing.Size(221, 467);
             this.navBarControl.SmallImages = this.imageCollection;
             this.navBarControl.StoreDefaultPaintStyleName = true;
             this.navBarControl.TabIndex = 6;
@@ -237,13 +243,20 @@
             // 
             // inboxItem
             // 
+            this.inboxItem.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.inboxItem.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inboxItem.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.inboxItem.Appearance.Options.UseBackColor = true;
             this.inboxItem.Appearance.Options.UseFont = true;
+            this.inboxItem.Appearance.Options.UseForeColor = true;
             this.inboxItem.AppearanceHotTracked.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inboxItem.AppearanceHotTracked.Options.UseFont = true;
+            this.inboxItem.AppearancePressed.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.inboxItem.AppearancePressed.Options.UseFont = true;
             this.inboxItem.Caption = "BCM节点";
             this.inboxItem.Name = "inboxItem";
             this.inboxItem.SmallImageIndex = 0;
+            this.inboxItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.inboxItem_LinkClicked);
             // 
             // outboxItem
             // 
@@ -258,6 +271,7 @@
             this.outboxItem.Caption = "PEPS节点";
             this.outboxItem.Name = "outboxItem";
             this.outboxItem.SmallImageIndex = 1;
+            this.outboxItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.outboxItem_LinkClicked);
             // 
             // navBarSeparatorItem1
             // 
@@ -300,13 +314,47 @@
             this.imageCollection.Images.SetKeyName(1, "Drafts_16x16.png");
             this.imageCollection.Images.SetKeyName(2, "Organizer_16x16.png");
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.textEdit1);
+            this.panel1.Controls.Add(this.labelControl1);
+            this.panel1.Location = new System.Drawing.Point(5, 443);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(780, 107);
+            this.panel1.TabIndex = 95;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.pictureEdit2);
+            this.panel2.Controls.Add(this.pictureEdit);
             this.panel2.Controls.Add(this.hyperlinkLabelControl1);
-            this.panel2.Location = new System.Drawing.Point(792, 535);
+            this.panel2.Location = new System.Drawing.Point(645, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(62, 26);
+            this.panel2.Size = new System.Drawing.Size(133, 27);
             this.panel2.TabIndex = 96;
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = global::UltraANetT.Properties.Resources.Stop;
+            this.pictureEdit2.Location = new System.Drawing.Point(38, 2);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.InitialImage = global::UltraANetT.Properties.Resources.Ribbon_Info_32x32;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Size = new System.Drawing.Size(24, 24);
+            this.pictureEdit2.TabIndex = 97;
+            // 
+            // pictureEdit
+            // 
+            this.pictureEdit.EditValue = global::UltraANetT.Properties.Resources.Run;
+            this.pictureEdit.Location = new System.Drawing.Point(1, 2);
+            this.pictureEdit.Name = "pictureEdit";
+            this.pictureEdit.Properties.InitialImage = global::UltraANetT.Properties.Resources.Ribbon_Info_32x32;
+            this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit.Size = new System.Drawing.Size(24, 24);
+            this.pictureEdit.TabIndex = 96;
+            this.pictureEdit.EditValueChanged += new System.EventHandler(this.pictureEdit_EditValueChanged);
+            this.pictureEdit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureEdit_MouseClick);
             // 
             // hyperlinkLabelControl1
             // 
@@ -315,36 +363,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.hyperlinkLabelControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(3, 2);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(76, 4);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(52, 19);
             this.hyperlinkLabelControl1.TabIndex = 95;
             this.hyperlinkLabelControl1.Text = "测试报告";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textEdit1);
-            this.panel1.Controls.Add(this.labelControl1);
-            this.panel1.Location = new System.Drawing.Point(7, 534);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 135);
-            this.panel1.TabIndex = 95;
             // 
             // textEdit1
             // 
             this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit1.Location = new System.Drawing.Point(3, 28);
+            this.textEdit1.Location = new System.Drawing.Point(3, 29);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.AutoHeight = false;
-            this.textEdit1.Size = new System.Drawing.Size(844, 104);
+            this.textEdit1.Size = new System.Drawing.Size(775, 75);
             this.textEdit1.TabIndex = 94;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl1.Location = new System.Drawing.Point(4, 3);
+            this.labelControl1.Location = new System.Drawing.Point(4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(68, 19);
             this.labelControl1.TabIndex = 72;
@@ -354,16 +393,17 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(807, 14);
+            this.simpleButton1.Location = new System.Drawing.Point(737, 13);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(48, 61);
             this.simpleButton1.TabIndex = 94;
             this.simpleButton1.Text = "保存";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(668, 55);
+            this.labelControl11.Location = new System.Drawing.Point(602, 55);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(36, 17);
             this.labelControl11.TabIndex = 92;
@@ -371,17 +411,17 @@
             // 
             // textEdit11
             // 
-            this.textEdit11.Location = new System.Drawing.Point(709, 50);
+            this.textEdit11.Location = new System.Drawing.Point(643, 50);
             this.textEdit11.Name = "textEdit11";
             this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit11.Properties.Appearance.Options.UseFont = true;
-            this.textEdit11.Size = new System.Drawing.Size(93, 24);
+            this.textEdit11.Size = new System.Drawing.Size(80, 24);
             this.textEdit11.TabIndex = 91;
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(644, 17);
+            this.labelControl10.Location = new System.Drawing.Point(578, 17);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(60, 17);
             this.labelControl10.TabIndex = 90;
@@ -389,17 +429,17 @@
             // 
             // textEdit10
             // 
-            this.textEdit10.Location = new System.Drawing.Point(709, 14);
+            this.textEdit10.Location = new System.Drawing.Point(643, 14);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Size = new System.Drawing.Size(93, 24);
+            this.textEdit10.Size = new System.Drawing.Size(80, 24);
             this.textEdit10.TabIndex = 89;
             // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(481, 56);
+            this.labelControl9.Location = new System.Drawing.Point(429, 56);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(60, 17);
             this.labelControl9.TabIndex = 88;
@@ -407,17 +447,17 @@
             // 
             // textEdit9
             // 
-            this.textEdit9.Location = new System.Drawing.Point(545, 52);
+            this.textEdit9.Location = new System.Drawing.Point(493, 52);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
-            this.textEdit9.Size = new System.Drawing.Size(93, 24);
+            this.textEdit9.Size = new System.Drawing.Size(80, 24);
             this.textEdit9.TabIndex = 87;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(481, 18);
+            this.labelControl8.Location = new System.Drawing.Point(429, 18);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(60, 17);
             this.labelControl8.TabIndex = 86;
@@ -425,17 +465,17 @@
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(545, 14);
+            this.textEdit8.Location = new System.Drawing.Point(493, 14);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Size = new System.Drawing.Size(93, 24);
+            this.textEdit8.Size = new System.Drawing.Size(80, 24);
             this.textEdit8.TabIndex = 85;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(319, 56);
+            this.labelControl7.Location = new System.Drawing.Point(278, 56);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(60, 17);
             this.labelControl7.TabIndex = 84;
@@ -443,17 +483,17 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(382, 52);
+            this.textEdit7.Location = new System.Drawing.Point(341, 52);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(93, 24);
+            this.textEdit7.Size = new System.Drawing.Size(80, 24);
             this.textEdit7.TabIndex = 83;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(331, 18);
+            this.labelControl6.Location = new System.Drawing.Point(290, 18);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(48, 17);
             this.labelControl6.TabIndex = 82;
@@ -461,17 +501,17 @@
             // 
             // textEdit6
             // 
-            this.textEdit6.Location = new System.Drawing.Point(382, 14);
+            this.textEdit6.Location = new System.Drawing.Point(341, 14);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(93, 24);
+            this.textEdit6.Size = new System.Drawing.Size(80, 24);
             this.textEdit6.TabIndex = 81;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(170, 56);
+            this.labelControl5.Location = new System.Drawing.Point(143, 56);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(48, 17);
             this.labelControl5.TabIndex = 80;
@@ -479,35 +519,35 @@
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(222, 52);
+            this.textEdit5.Location = new System.Drawing.Point(191, 52);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(93, 24);
+            this.textEdit5.Size = new System.Drawing.Size(80, 24);
             this.textEdit5.TabIndex = 79;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(158, 18);
+            this.labelControl4.Location = new System.Drawing.Point(152, 18);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 17);
+            this.labelControl4.Size = new System.Drawing.Size(36, 17);
             this.labelControl4.TabIndex = 78;
-            this.labelControl4.Text = "测试阶段：";
+            this.labelControl4.Text = "阶段：";
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(222, 14);
+            this.textEdit4.Location = new System.Drawing.Point(191, 14);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(93, 24);
+            this.textEdit4.Size = new System.Drawing.Size(80, 24);
             this.textEdit4.TabIndex = 77;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(9, 56);
+            this.labelControl3.Location = new System.Drawing.Point(5, 56);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(48, 17);
             this.labelControl3.TabIndex = 76;
@@ -515,17 +555,17 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(58, 52);
+            this.textEdit3.Location = new System.Drawing.Point(54, 52);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(93, 24);
+            this.textEdit3.Size = new System.Drawing.Size(80, 24);
             this.textEdit3.TabIndex = 75;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(21, 18);
+            this.labelControl2.Location = new System.Drawing.Point(17, 18);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(36, 17);
             this.labelControl2.TabIndex = 74;
@@ -533,11 +573,11 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(58, 14);
+            this.textEdit2.Location = new System.Drawing.Point(54, 14);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(93, 24);
+            this.textEdit2.Size = new System.Drawing.Size(80, 24);
             this.textEdit2.TabIndex = 73;
             // 
             // gridControl
@@ -546,7 +586,7 @@
             this.gridControl.EmbeddedNavigator.Appearance.Options.UseFont = true;
             this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gridControl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl.Location = new System.Drawing.Point(7, 82);
+            this.gridControl.Location = new System.Drawing.Point(5, 82);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gridControl.Name = "gridControl";
@@ -554,8 +594,9 @@
             this.repositoryItemProgressBar,
             this.repositoryItemImageEdit,
             this.repositoryItemPictureEdit,
-            this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(848, 451);
+            this.repositoryItemCheckEdit,
+            this.repositoryItemHyperLinkEdit1});
+            this.gridControl.Size = new System.Drawing.Size(780, 360);
             this.gridControl.TabIndex = 70;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -580,7 +621,8 @@
             this.firstName,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn3});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
@@ -589,6 +631,11 @@
             this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView.OptionsView.RowAutoHeight = true;
             this.gridView.OptionsView.ShowGroupPanel = false;
+            this.gridView.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView_CustomDrawCell);
+            this.gridView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView_RowCellStyle);
+            this.gridView.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_RowStyle);
+            this.gridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView_CellValueChanged);
+            this.gridView.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView_RowUpdated);
             // 
             // gvTestName
             // 
@@ -662,9 +709,24 @@
             // 
             this.repositoryItemPictureEdit.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.DisplayText;
             this.repositoryItemPictureEdit.Name = "repositoryItemPictureEdit";
+            this.repositoryItemPictureEdit.NullText = " ";
             this.repositoryItemPictureEdit.PictureInterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
             this.repositoryItemPictureEdit.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.repositoryItemPictureEdit.ZoomPercent = 25D;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "查看子报告";
+            this.gridColumn3.ColumnEdit = this.repositoryItemHyperLinkEdit1;
+            this.gridColumn3.FieldName = "testReport";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 8;
+            // 
+            // repositoryItemHyperLinkEdit1
+            // 
+            this.repositoryItemHyperLinkEdit1.AutoHeight = false;
+            this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
             // 
             // repositoryItemImageEdit
             // 
@@ -684,7 +746,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "AutoTest";
-            this.Size = new System.Drawing.Size(1099, 674);
+            this.Size = new System.Drawing.Size(1022, 551);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
@@ -692,10 +754,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
@@ -711,6 +775,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             this.ResumeLayout(false);
@@ -771,5 +836,9 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
     }
 }

@@ -57,10 +57,6 @@
     <Reference Include="DevExpress.CodeRush.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DXCore.Parser, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
-    <Reference Include="DevExpress.MailClient.Win.resources, Version=15.2.5.0, Culture=ar, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DevExpress.MailClient.Win.resources.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -77,6 +73,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -86,6 +83,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Input.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Input.Designer.cs">
+      <DependentUpon>Input.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\VehicelTree.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +129,9 @@
     <Compile Include="wfMain.designer.cs">
       <DependentUpon>wfMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\Input.resx">
+      <DependentUpon>Input.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\VehicelTree.resx">
       <DependentUpon>VehicelTree.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +187,134 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Calendar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Ribbon_Info_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.Common.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.Common.xml" />
+    <Content Include="DLL\DevExpress.CodeRush.Core.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.Core.xml" />
+    <Content Include="DLL\DevExpress.CodeRush.Extensions.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.Extensions.xml" />
+    <Content Include="DLL\DevExpress.CodeRush.Interop.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.StructuralParser.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.StructuralParser.xml" />
+    <Content Include="DLL\DevExpress.CodeRush.VSCore.dll" />
+    <Content Include="DLL\DevExpress.CodeRush.VSCore.xml" />
+    <Content Include="DLL\DevExpress.Data.v15.2.dll" />
+    <Content Include="DLL\DevExpress.Data.v15.2.xml" />
+    <Content Include="DLL\DevExpress.DXCore.AssemblyResolver.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.Data.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.Utils.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.XtraBars.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.XtraEditors.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Controls.XtraTreeList.v6.3.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Decompiler.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Localization.dll" />
+    <Content Include="DLL\DevExpress.DXCore.MetaData.dll" />
+    <Content Include="DLL\DevExpress.DXCore.MetaData.xml" />
+    <Content Include="DLL\DevExpress.DXCore.Mvvm.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Mvvm.UI.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Parser.dll" />
+    <Content Include="DLL\DevExpress.DXCore.Parser.xml" />
+    <Content Include="DLL\DevExpress.DXCore.Platform.dll" />
+    <Content Include="DLL\DevExpress.IntelliRush.Core.dll" />
+    <Content Include="DLL\DevExpress.MailClient.Win.resources.dll" />
+    <Content Include="DLL\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="DLL\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="DLL\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="DLL\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="DLL\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="DLL\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="DLL\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="DLL\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="DLL\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="DLL\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="DLL\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="DLL\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="DLL\DevExpress.Utils.v15.2.dll" />
+    <Content Include="DLL\DevExpress.Utils.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="DLL\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="DLL\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="DLL\EnvDTE80.dll" />
+    <Content Include="DLL\EnvDTE80.xml" />
+    <Content Include="DLL\Extensibility.dll" />
+    <Content Include="DLL\Extensibility.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.Debugger.InteropA.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.OLE.Interop.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.10.0.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.8.0.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
+    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.xml" />
+    <Content Include="Images\Drafts_16x16.png" />
+    <Content Include="Images\False.png" />
+    <Content Include="Images\Inbox_16x16.png" />
+    <Content Include="Images\Mail_16x16.png" />
+    <Content Include="Images\Organizer_16x16.png" />
+    <Content Include="Images\Outbox_16x16.png" />
+    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="Images\Ribbon_Bold_16x16.png" />
+    <Content Include="Images\Ribbon_Close_16x16.png" />
+    <Content Include="Images\Ribbon_Close_32x32.png" />
+    <Content Include="Images\Ribbon_Content_16x16.png" />
+    <Content Include="Images\Ribbon_Content_32x32.png" />
+    <Content Include="Images\Ribbon_Exit_16x16.png" />
+    <Content Include="Images\Ribbon_Exit_32x32.png" />
+    <Content Include="Images\Ribbon_Find_16x16.png" />
+    <Content Include="Images\Ribbon_Find_32x32.png" />
+    <Content Include="Images\Ribbon_Info_16x16.png" />
+    <Content Include="Images\Ribbon_Italic_16x16.png" />
+    <Content Include="Images\Ribbon_New_16x16.png" />
+    <Content Include="Images\Ribbon_New_32x32.png" />
+    <Content Include="Images\Ribbon_Open_16x16.png" />
+    <Content Include="Images\Ribbon_Open_32x32.png" />
+    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="Images\Ribbon_Save_16x16.png" />
+    <Content Include="Images\Ribbon_Save_32x32.png" />
+    <Content Include="Images\Ribbon_Underline_16x16.png" />
+    <Content Include="Images\Tasks_16x16.png" />
+    <Content Include="Images\Trash_16x16.png" />
+    <Content Include="Images\True.png" />
+    <Content Include="Images\Wait.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
