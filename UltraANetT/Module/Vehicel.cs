@@ -7,18 +7,17 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Threading;
 
 namespace UltraANetT.Module
 {
-    public partial class VehicelConfig : DevExpress.XtraEditors.XtraUserControl
+    public partial class Vehicel : DevExpress.XtraEditors.XtraUserControl
     {
-        public VehicelConfig()
+        public Vehicel()
         {
             InitializeComponent();
             InitGrid();
-         
         }
-
         private void InitGrid()
         {
             gridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
@@ -41,14 +40,5 @@ namespace UltraANetT.Module
             gridControl.DataSource = dt;
         }
 
-        private void vehicelTree_MouseDown(object sender, MouseEventArgs e)
-        {
-           
-        }
-
-        private void xtraTabControl1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

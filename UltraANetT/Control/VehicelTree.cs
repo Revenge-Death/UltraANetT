@@ -26,19 +26,16 @@ namespace UltraANetT.Control
         {
             if (e.Button == MouseButtons.Right)
             {
-                //treeList.ContextMenuStrip = null;
+                treeList.ContextMenuStrip = null;
 
                 DevExpress.XtraTreeList.TreeListHitInfo hInfo = treeList.CalcHitInfo(new Point(e.X, e.Y));
                 TreeListNode node = hInfo.Node;
                 treeList.FocusedNode = node;
-                if (node.HasChildren)
-                    treeList.ContextMenuStrip = CMSTask;
-                else
+                int level = node.Level;
+                if (level == 0)
                     treeList.ContextMenuStrip = CMSCar;
-                //if (node != null)
-                //{
-                //    
-                //}
+                else if (level == 1)
+                    treeList.ContextMenuStrip = CMSTask;
             }
         }
     }

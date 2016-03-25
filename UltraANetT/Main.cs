@@ -15,21 +15,22 @@ using DevExpress.XtraSplashScreen;
 using System.Threading;
 using DevExpress.XtraTreeList.Nodes;
 using UltraANetT.Module;
+using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars;
 
 namespace UltraANetT
 {
     public partial class Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        BarBaseButtonItem barContainer;
         public Main()
         {
             InitializeComponent();
-            //SplashScreenManager.ShowForm(GetType(LoadScreen));
-            //Thread.Sleep(3000);
-            //SplashScreenManager.CloseForm();
 
             InitSkinGallery();
             InitGrid();
-          
+            SkinSelect();
+
 
         }
         void InitSkinGallery()
@@ -42,41 +43,80 @@ namespace UltraANetT
            
 
         }
-
-
-
-
-        
-
-
-        private void iNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        void SkinSelect()
         {
-            SplashScreenManager.ShowForm( typeof(wfMain), false, true);
-            VehicelConfig vc = new VehicelConfig();
+            SkinView.Gallery.Groups[0].Items.RemoveAt(0);
+            SkinView.Gallery.Groups[0].Items.RemoveAt(0);
+            for (int i = 0; i < 10; i++)
+                SkinView.Gallery.Groups[0].Items.RemoveAt(3);
+            for (int i = 0; i < 16; i++)
+                SkinView.Gallery.Groups[1].Items.RemoveAt(0);
+            for (int i = 0; i < 9; i++)
+                SkinView.Gallery.Groups[1].Items.RemoveAt(1);
+            SkinView.Gallery.Groups[2].Items.Clear();
+        }
+
+
+
+
+
+
+
+private void iNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           
             pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm( typeof(wfMain), false, true);
+            Vehicel vc = new Vehicel();
+            vc.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            vc.Dock = DockStyle.Fill;
             pcMain.Controls.Add(vc);
             SplashScreenManager.CloseForm();
-            iHelp.ItemAppearance.Normal.BackColor = Color.Transparent;
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
             iNew.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = iNew;
         }
 
         private void iHelp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
-            AutoTest at = new AutoTest();
+           
             pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Auto at = new Auto();
+            at.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            at.Dock = DockStyle.Fill;
             pcMain.Controls.Add(at);
             SplashScreenManager.CloseForm();
-            iNew.ItemAppearance.Normal.BackColor = Color.Transparent;
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
             iHelp.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = iHelp;
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //VehicelConfig vc = new VehicelConfig();
-            //pcMain.Controls.Clear();
-            //pcMain.Controls.Add(vc);
-            //iNew.ItemAppearance.Normal.BackColor = Color.Silver;
+            Vehicel vc = new Vehicel();
+            vc.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            pcMain.Controls.Clear();
+            pcMain.Controls.Add(vc);
+            iNew.ItemAppearance.Normal.BackColor = Color.Silver;
         }
+
+        private void btEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Employee em = new Employee();
+            em.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(em);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btEmployee.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btEmployee;
+        }
+
     }
 }

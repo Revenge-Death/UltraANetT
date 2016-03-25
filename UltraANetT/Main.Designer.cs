@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UltraANetT.LoadScreen), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
@@ -38,7 +37,7 @@
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.iNew = new DevExpress.XtraBars.BarButtonItem();
             this.iClose = new DevExpress.XtraBars.BarButtonItem();
-            this.iFind = new DevExpress.XtraBars.BarButtonItem();
+            this.btEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.iSave = new DevExpress.XtraBars.BarButtonItem();
             this.iSaveAs = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
@@ -55,10 +54,11 @@
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.SkinView = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -82,12 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollectionLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcMain)).BeginInit();
-            this.pcMain.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splashScreenManager
-            // 
-            splashScreenManager.ClosingDelay = 500;
             // 
             // ribbonControl
             // 
@@ -100,7 +95,7 @@
             this.iNew,
             this.iOpen,
             this.iClose,
-            this.iFind,
+            this.btEmployee,
             this.iSave,
             this.iSaveAs,
             this.iExit,
@@ -118,17 +113,18 @@
             this.iRightTextAlign,
             this.rgbiSkins,
             this.barStaticItem1,
-            this.skinRibbonGalleryBarItem1,
+            this.SkinView,
             this.barMdiChildrenListItem1,
             this.barHeaderItem1,
-            this.barStaticItem2});
+            this.barStaticItem2,
+            this.skinRibbonGalleryBarItem1});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ribbonControl.MaxItemId = 1;
+            this.ribbonControl.MaxItemId = 2;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.barStaticItem1);
-            this.ribbonControl.PageHeaderItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonControl.PageHeaderItemLinks.Add(this.SkinView);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.homeRibbonPage,
             this.helpRibbonPage,
@@ -229,23 +225,24 @@
             this.iClose.Name = "iClose";
             this.iClose.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // iFind
+            // btEmployee
             // 
-            this.iFind.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.iFind.Caption = "人员管理";
-            this.iFind.Description = "Searches for the specified info.";
-            this.iFind.Hint = "Searches for the specified info";
-            this.iFind.Id = 15;
-            this.iFind.ImageIndex = 3;
-            this.iFind.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.iFind.ItemAppearance.Hovered.Options.UseFont = true;
-            this.iFind.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.iFind.ItemAppearance.Normal.Options.UseFont = true;
-            this.iFind.LargeImageIndex = 3;
-            this.iFind.LargeWidth = 80;
-            this.iFind.Name = "iFind";
-            this.iFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btEmployee.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btEmployee.Caption = "人员管理";
+            this.btEmployee.Description = "Searches for the specified info.";
+            this.btEmployee.Hint = "Searches for the specified info";
+            this.btEmployee.Id = 15;
+            this.btEmployee.ImageIndex = 3;
+            this.btEmployee.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.btEmployee.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btEmployee.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.btEmployee.ItemAppearance.Normal.Options.UseFont = true;
+            this.btEmployee.LargeImageIndex = 3;
+            this.btEmployee.LargeWidth = 80;
+            this.btEmployee.Name = "btEmployee";
+            this.btEmployee.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btEmployee_ItemClick);
             // 
             // iSave
             // 
@@ -316,7 +313,7 @@
             // 
             // siStatus
             // 
-            this.siStatus.Caption = "主程序版本号：JZXD-20160101-1.0.2.1\r\n";
+            this.siStatus.Caption = "主程序版本号：JZXD-20160101-1.0.2.1\r\n|";
             this.siStatus.Id = 31;
             this.siStatus.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siStatus.ItemAppearance.Normal.Options.UseFont = true;
@@ -325,7 +322,7 @@
             // 
             // siInfo
             // 
-            this.siInfo.Caption = "数据库版本号：A2348I\r\n";
+            this.siInfo.Caption = "数据库版本号：A2348I\r\n|";
             this.siInfo.Id = 32;
             this.siInfo.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siInfo.ItemAppearance.Normal.Options.UseFont = true;
@@ -421,11 +418,11 @@
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // skinRibbonGalleryBarItem1
+            // SkinView
             // 
-            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-            this.skinRibbonGalleryBarItem1.Id = 2;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            this.SkinView.Caption = "skinRibbonGalleryBarItem1";
+            this.SkinView.Id = 2;
+            this.SkinView.Name = "SkinView";
             // 
             // barMdiChildrenListItem1
             // 
@@ -449,6 +446,12 @@
             this.barStaticItem2.ItemAppearance.Normal.Options.UseForeColor = true;
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 1;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
             // ribbonImageCollectionLarge
             // 
@@ -476,7 +479,7 @@
             // fileRibbonPageGroup
             // 
             this.fileRibbonPageGroup.ItemLinks.Add(this.iNew, true);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iFind);
+            this.fileRibbonPageGroup.ItemLinks.Add(this.btEmployee);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iSave);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iSaveAs);
             this.fileRibbonPageGroup.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.TwoRows;
@@ -598,6 +601,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Main";
             this.Ribbon = this.ribbonControl;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -607,7 +611,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navbarImageCollectionLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcMain)).EndInit();
-            this.pcMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,7 +621,7 @@
         private DevExpress.XtraBars.BarButtonItem iNew;
         private DevExpress.XtraBars.BarButtonItem iOpen;
         private DevExpress.XtraBars.BarButtonItem iClose;
-        private DevExpress.XtraBars.BarButtonItem iFind;
+        private DevExpress.XtraBars.BarButtonItem btEmployee;
         private DevExpress.XtraBars.BarButtonItem iSave;
         private DevExpress.XtraBars.BarButtonItem iSaveAs;
         private DevExpress.XtraBars.BarButtonItem iExit;
@@ -654,10 +657,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraEditors.PanelControl pcMain;
-        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem SkinView;
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private Module.XtraUserControl1 xtraUserControl11;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
     }
 }

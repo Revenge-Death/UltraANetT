@@ -11,29 +11,25 @@ using System.Threading;
 
 namespace UltraANetT.Module
 {
-    public partial class AutoTest : DevExpress.XtraEditors.XtraUserControl
+    public partial class Auto : DevExpress.XtraEditors.XtraUserControl
     {
-        private delegate void SetGridValue(int value, int row);
-        private bool flag = true;
-        public AutoTest()
+        public Auto()
         {
             InitializeComponent();
             InitGrid();
-            AutoTest.CheckForIllegalCrossThreadCalls = false;
         }
+        private delegate void SetGridValue(int value, int row);
+        private bool flag = true;
         void InitGrid()
         {
 
             DataTable dt = new DataTable();
-            string[] colName = new string[] { "testName", "testContent", "testType", "testProgress", "testTime", "testResult", "testImg","testReport" };
+            string[] colName = new string[] { "testName", "testContent", "testType", "testProgress", "testTime", "testResult", "testImg", "testReport" };
             for (int i = 0; i < colName.Count(); i++)
             {
                 dt.Columns.Add(new DataColumn(colName[i], typeof(object)));
             }
 
-            //Image imgTure = Image.FromFile(@"../../Images/True.png");
-            //Image imgFalse = Image.FromFile(@"../../Images/False.png");
-            Image imgWait = Image.FromFile(@"../../Images/Wait.png");
             dt.Rows.Add(new object[] { "TC001", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
             dt.Rows.Add(new object[] { "TC002", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
             dt.Rows.Add(new object[] { "TC003", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
@@ -42,10 +38,6 @@ namespace UltraANetT.Module
             gridControl.DataSource = dt;
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SetDdv(int value, int row)
         {
@@ -66,16 +58,16 @@ namespace UltraANetT.Module
                 {
                     gridView.SetRowCellValue(row, gridView.Columns[4], "1分00秒");
                     gridView.SetRowCellValue(row, gridView.Columns[5], "NotOk");
-                    Image imgFalse = Image.FromFile(@"../../Images/False.png");
+                    Image imgFalse = Image.FromFile(@"Images/False.png");
                     gridView.SetRowCellValue(row, gridView.Columns[6], imgFalse);
                     gridView.SetRowCellValue(row, gridView.Columns[7], "查看子报告");
                     return;
-               }
+                }
                 if (value == 100)
                 {
                     gridView.SetRowCellValue(row, gridView.Columns[4], "1分30秒");
                     gridView.SetRowCellValue(row, gridView.Columns[5], "OK");
-                    Image imgTure = Image.FromFile(@"../../Images/True.png");
+                    Image imgTure = Image.FromFile(@"Images/True.png");
                     gridView.SetRowCellValue(row, gridView.Columns[6], imgTure);
                     gridView.SetRowCellValue(row, gridView.Columns[7], "查看子报告");
                 }
@@ -128,60 +120,10 @@ namespace UltraANetT.Module
 
         }
 
-        private void pictureEdit_EditValueChanged(object sender, EventArgs e)
+        private void inboxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-
-        }
-
-        private void pictureEdit_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (flag)
-            { pictureEdit.Image = Image.FromFile(@"../../Images/Pause.png"); flag = !flag; }
-            else
-            { pictureEdit.Image = Image.FromFile(@"../../Images/Run.png"); flag = !flag; }
-            Thread test = new Thread(Progress);
-            test.Start();
-        }
-
-        private void gridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-
-        }
-
-        private void gridView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-        }
-
-        private void gridView_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
-        {
-  
-        }
-
-        private void gridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-         
-         
-        }
-
-        private void gridView_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
-        {
-            if (e.RowHandle >= 0)
-            {
-                string result = gridView.GetRowCellValue(e.RowHandle, gridView.Columns[5]).ToString();
-                if (result == "NotOk")
-                { 
-                    e.Appearance.ForeColor = Color.Red;
-                   
-                 }
-            }
-            //if (e.Column.FieldName == "testResult")
-            //{
-            //    if ( e.CellValue.ToString() == "NotOk")
-            //    {
-            //        e.Appearance.BackColor = Color.Red;
-            //       ;
-            //    }
-            //}
+            outboxItem.Appearance.ForeColor = Color.Black;
+            inboxItem.Appearance.ForeColor = Color.Red;
         }
 
         private void outboxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -190,10 +132,27 @@ namespace UltraANetT.Module
             outboxItem.Appearance.ForeColor = Color.Red;
         }
 
-        private void inboxItem_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void gridView_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
-            outboxItem.Appearance.ForeColor = Color.Black;
-            inboxItem.Appearance.ForeColor = Color.Red;
+            if (e.RowHandle >= 0)
+            {
+                string result = gridView.GetRowCellValue(e.RowHandle, gridView.Columns[5]).ToString();
+                if (result == "NotOk")
+                {
+                    e.Appearance.ForeColor = Color.Red;
+
+                }
+            }
+        }
+
+        private void pictureEdit_Click(object sender, EventArgs e)
+        {
+            if (flag)
+            { pictureEdit.Image = Image.FromFile(@"Images/Pause.png"); flag = !flag; }
+            else
+            { pictureEdit.Image = Image.FromFile(@"Images/Run.png"); flag = !flag; }
+            Thread test = new Thread(Progress);
+            test.Start();
         }
     }
 }

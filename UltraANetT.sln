@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraANetT", "UltraANetT\UltraANetT.csproj", "{BC99C6CD-FEDE-4627-B574-549A8225DF5D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{45365579-5724-41BA-9D0E-5D05E94ED3A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{BC99C6CD-FEDE-4627-B574-549A8225DF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC99C6CD-FEDE-4627-B574-549A8225DF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC99C6CD-FEDE-4627-B574-549A8225DF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45365579-5724-41BA-9D0E-5D05E94ED3A2}.Debug|Any CPU.ActiveCfg = Debug
+		{45365579-5724-41BA-9D0E-5D05E94ED3A2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

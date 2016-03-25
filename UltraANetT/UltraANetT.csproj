@@ -15,6 +15,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -51,30 +51,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.Common, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DXCore.Parser, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -83,11 +102,48 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\Input.cs">
+    <Compile Include="AboutDevCompanion.cs" />
+    <Compile Include="Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Console.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\Input.Designer.cs">
-      <DependentUpon>Input.cs</DependentUpon>
+    <Compile Include="Control\Console.Designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EmTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\EmTable.Designer.cs">
+      <DependentUpon>EmTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EmList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\EmList.Designer.cs">
+      <DependentUpon>EmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\GroupBy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\GroupBy.Designer.cs">
+      <DependentUpon>GroupBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\NodeNav.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\NodeNav.Designer.cs">
+      <DependentUpon>NodeNav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UserInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UserInput.Designer.cs">
+      <DependentUpon>UserInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\VehicelTree.cs">
       <SubType>UserControl</SubType>
@@ -101,18 +157,23 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleNavigator.cs" />
-    <Compile Include="Module\AutoTest.cs">
+    <Compile Include="Module\Auto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Module\AutoTest.Designer.cs">
-      <DependentUpon>AutoTest.cs</DependentUpon>
+    <Compile Include="Module\Auto.Designer.cs">
+      <DependentUpon>Auto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Module\VehicelConfig.cs">
+    <Compile Include="Module\Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Module\VehicelConfig.Designer.cs">
-      <DependentUpon>VehicelConfig.cs</DependentUpon>
+    <Compile Include="Module\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Vehicel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\Vehicel.Designer.cs">
+      <DependentUpon>Vehicel.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -129,8 +190,26 @@
     <Compile Include="wfMain.designer.cs">
       <DependentUpon>wfMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Control\Input.resx">
-      <DependentUpon>Input.cs</DependentUpon>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\EmTable.resx">
+      <DependentUpon>EmTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\EmList.resx">
+      <DependentUpon>EmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\GroupBy.resx">
+      <DependentUpon>GroupBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\NodeNav.resx">
+      <DependentUpon>NodeNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UserInput.resx">
+      <DependentUpon>UserInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\VehicelTree.resx">
       <DependentUpon>VehicelTree.cs</DependentUpon>
@@ -138,11 +217,14 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\AutoTest.resx">
-      <DependentUpon>AutoTest.cs</DependentUpon>
+    <EmbeddedResource Include="Module\Auto.resx">
+      <DependentUpon>Auto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\VehicelConfig.resx">
-      <DependentUpon>VehicelConfig.cs</DependentUpon>
+    <EmbeddedResource Include="Module\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Vehicel.resx">
+      <DependentUpon>Vehicel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -204,6 +286,13 @@
     <None Include="Images\Stop.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Images\GridContacts.png" />
+    <None Include="bin\Debug\Images\GridTasks.png" />
+    <None Include="bin\Debug\Images\List_32x32.png" />
+    <None Include="bin\Debug\Images\ListByDate_32x32.png" />
+    <None Include="bin\Debug\Images\NavigationBar_32x32.png" />
+    <None Include="bin\Debug\Images\2.jpeg" />
+    <None Include="bin\Debug\Images\8.jpg" />
     <Content Include="DLL\DevExpress.BonusSkins.v15.2.dll" />
     <Content Include="DLL\DevExpress.CodeRush.Common.dll" />
     <Content Include="DLL\DevExpress.CodeRush.Common.xml" />
@@ -282,6 +371,14 @@
     <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
     <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.dll" />
     <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.xml" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpeg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\8.jpg" />
     <Content Include="Images\Drafts_16x16.png" />
     <Content Include="Images\False.png" />
     <Content Include="Images\Inbox_16x16.png" />

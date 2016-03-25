@@ -72,6 +72,7 @@
             this.treeList.Font = new System.Drawing.Font("微软雅黑 Light", 10F);
             this.treeList.HtmlImages = this.imageTree;
             this.treeList.Location = new System.Drawing.Point(0, 0);
+            this.treeList.LookAndFeel.SkinName = "Office 2016 Dark";
             this.treeList.Name = "treeList";
             this.treeList.BeginUnboundLoad();
             this.treeList.AppendNode(new object[] {

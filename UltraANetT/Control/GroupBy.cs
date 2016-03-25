@@ -10,9 +10,9 @@ using DevExpress.XtraEditors;
 
 namespace UltraANetT.Control
 {
-    public partial class Input : DevExpress.XtraEditors.XtraUserControl
+    public partial class GroupBy : DevExpress.XtraEditors.XtraUserControl
     {
-        public Input()
+        public GroupBy()
         {
             InitializeComponent();
         }
