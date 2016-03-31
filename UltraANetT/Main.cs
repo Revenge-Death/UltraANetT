@@ -118,5 +118,116 @@ private void iNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArg
             barContainer = btEmployee;
         }
 
+        private void Manual_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Manual em = new Manual();
+            em.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(em);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            Manual.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = Manual;
+        }
+
+        private void btDeptMge_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Department dept = new Department();
+            dept.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(dept);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btDeptMge.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btDeptMge;
+        }
+
+        private void btStatistics_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Statistics Stat = new Statistics();
+            Stat.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(Stat);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btStatistics.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btStatistics;
+        }
+
+        private void btDeviceInfo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            HardwareInfo hardInfo = new HardwareInfo();
+            hardInfo.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(hardInfo);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btDeviceInfo.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btDeviceInfo;
+        }
+
+        private void btDeviceCheck_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            HardwareCheck hardCheck = new HardwareCheck();
+            hardCheck.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(hardCheck);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btDeviceInfo.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btDeviceInfo;
+        }
+
+        private void btTools_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            Tools tools = new Tools();
+            tools.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(tools);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btTools.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btTools;
+        }
+
+        private void btModifyPwd_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            UserPwd pwd = new UserPwd();
+            pwd.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(pwd);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btModifyPwd.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btModifyPwd;
+        }
+
+        private void btLog_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            pcMain.Controls.Clear();
+            SplashScreenManager.ShowForm(typeof(wfMain), false, true);
+            LogInfo log = new LogInfo();
+            log.Dock = DockStyle.Fill;
+            pcMain.Controls.Add(log);
+            SplashScreenManager.CloseForm();
+            if (barContainer != null)
+                barContainer.ItemAppearance.Normal.BackColor = Color.Transparent;
+            btLog.ItemAppearance.Normal.BackColor = Color.Silver;
+            barContainer = btLog;
+        }
     }
 }

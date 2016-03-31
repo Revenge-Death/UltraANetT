@@ -33,16 +33,16 @@ namespace UltraANetT.Control
                 dt.Columns.Add(new DataColumn(colName[i], typeof(object)));
             }
 
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\2.jpeg"),"张三", "开发部", "测试员", "张某某", "2016-03-02" });
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\3.jpg"), "李四", "开发部", "测试员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "张三", "开发部", "测试员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] {  Image.FromFile(@"Images\user.png"), "李四", "开发部", "测试员", "张某某", "2016-03-02" });
 
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\4.jpg"), "王五", "商务部", "配置员", "张某某", "2016-03-02" });
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\5.jpg"), "赵六", "商务部", "配置员", "张某某", "2016-03-02" });
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\6.jpg"), "马七", "运维部", "配置员", "张某某", "2016-03-02" });
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\7.jpg"), "楚九", "运维部", "测试员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "王五", "商务部", "配置员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "赵六", "商务部", "配置员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "马七", "运维部", "配置员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "楚九", "运维部", "测试员", "张某某", "2016-03-02" });
 
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\8.jpg"), "冯十", "运维部", "管理员", "张某某", "2016-03-02" });
-            dt.Rows.Add(new object[] { Image.FromFile(@"Images\1.jpg"), "吴一", "管理部", "管理员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "冯十", "运维部", "管理员", "张某某", "2016-03-02" });
+            dt.Rows.Add(new object[] { Image.FromFile(@"Images\user.png"), "吴一", "管理部", "管理员", "张某某", "2016-03-02" });
             gridControl.DataSource = dt;
         }
     }

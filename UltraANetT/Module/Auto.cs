@@ -18,7 +18,7 @@ namespace UltraANetT.Module
             InitializeComponent();
             InitGrid();
         }
-        private delegate void SetGridValue(int value, int row);
+        private delegate void SetGridValue(int row);
         private bool flag = true;
         void InitGrid()
         {
@@ -30,31 +30,27 @@ namespace UltraANetT.Module
                 dt.Columns.Add(new DataColumn(colName[i], typeof(object)));
             }
 
-            dt.Rows.Add(new object[] { "TC001", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
-            dt.Rows.Add(new object[] { "TC002", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
-            dt.Rows.Add(new object[] { "TC003", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
-            dt.Rows.Add(new object[] { "TC004", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
-            dt.Rows.Add(new object[] { "TC005", "隐性输出电压", "隐性测试次数为1", 0, "", "Waiting", null, "" });
+            dt.Rows.Add(new object[] { "TC001", "隐性输出电压", "隐性测试次数为1", 100, "", "Waiting", null, "" });
+            dt.Rows.Add(new object[] { "TC002", "隐性输出电压", "隐性测试次数为1", 50, "", "Waiting", null, "" });
+            dt.Rows.Add(new object[] { "TC003", "隐性输出电压", "隐性测试次数为1", 50, "", "Waiting", null, "" });
+            dt.Rows.Add(new object[] { "TC004", "隐性输出电压", "隐性测试次数为1", 50, "", "Waiting", null, "" });
+            dt.Rows.Add(new object[] { "TC005", "隐性输出电压", "隐性测试次数为1", 50, "", "Waiting", null, "" });
             gridControl.DataSource = dt;
         }
 
 
-        private void SetDdv(int value, int row)
+        private void SetDdv( int row)
         {
-            int test = (int)value;
             if (gridControl.InvokeRequired)
             {
                 SetGridValue sds = SetDdv;
-                Invoke(sds, value, row);
+                Invoke(sds, row);
             }
             else
             {
-                if (value == 0)
-                {
-                    gridView.SetRowCellValue(row, gridView.Columns[5], "Running");
-                }
-                gridView.SetRowCellValue(row, gridView.Columns[3], value);
-                if (row == 3 && value == 100)
+                gridView.SetRowCellValue(row, gridView.Columns[5], "Running");
+                
+                if (row == 3)
                 {
                     gridView.SetRowCellValue(row, gridView.Columns[4], "1分00秒");
                     gridView.SetRowCellValue(row, gridView.Columns[5], "NotOk");
@@ -63,60 +59,33 @@ namespace UltraANetT.Module
                     gridView.SetRowCellValue(row, gridView.Columns[7], "查看子报告");
                     return;
                 }
-                if (value == 100)
-                {
-                    gridView.SetRowCellValue(row, gridView.Columns[4], "1分30秒");
-                    gridView.SetRowCellValue(row, gridView.Columns[5], "OK");
-                    Image imgTure = Image.FromFile(@"Images/True.png");
-                    gridView.SetRowCellValue(row, gridView.Columns[6], imgTure);
-                    gridView.SetRowCellValue(row, gridView.Columns[7], "查看子报告");
-                }
+                gridView.SetRowCellValue(row, gridView.Columns[3], false);
+                gridView.SetRowCellValue(row, gridView.Columns[4], "1分30秒");
+                gridView.SetRowCellValue(row, gridView.Columns[5], "OK");
+                Image imgTure = Image.FromFile(@"Images/True.png");
+                gridView.SetRowCellValue(row, gridView.Columns[6], imgTure);
+                gridView.SetRowCellValue(row, gridView.Columns[7], "查看子报告");
             }
 
         }
 
         private void Progress()
         {
-            int value = 0;
             int row = 0;
-            while (value <= 100)
-            {
-                SetDdv(value, row);
-                value += 1;
-                Thread.Sleep(30);
-            }
-            value = 0;
+            SetDdv(row);
+            Thread.Sleep(3000);
             row += 1;
-            while (value <= 100)
-            {
-                SetDdv(value, row);
-                value += 1;
-                Thread.Sleep(30);
-            }
-            value = 0;
+            SetDdv(row);
+            Thread.Sleep(3000);
             row += 1;
-            while (value <= 100)
-            {
-                SetDdv(value, row);
-                value += 1;
-                Thread.Sleep(30);
-            }
-            value = 0;
+            SetDdv(row);
+            Thread.Sleep(3000);
             row += 1;
-            while (value <= 100)
-            {
-                SetDdv(value, row);
-                value += 1;
-                Thread.Sleep(30);
-            }
-            value = 0;
+            SetDdv(row);
+            Thread.Sleep(3000);
             row += 1;
-            while (value <= 100)
-            {
-                SetDdv(value, row);
-                value += 1;
-                Thread.Sleep(30);
-            }
+            SetDdv(row);
+            Thread.Sleep(3000);
 
         }
 
@@ -153,6 +122,30 @@ namespace UltraANetT.Module
             { pictureEdit.Image = Image.FromFile(@"Images/Run.png"); flag = !flag; }
             Thread test = new Thread(Progress);
             test.Start();
+            gridView.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
+            gridView.Columns[3].ColumnEdit = ProRun;
+        }
+
+        private void gridView_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
+        {
+            //if (e.RowHandle == 0)
+            //{
+            //    e.RepositoryItem = ProRun;
+            //}
+            //else if (e.Column.FieldName.Equals("fileTransferInProcess"))
+            //{
+            //    e.RepositoryItem = this.progressBarStopped;
+            //}
+        }
+
+        private void gridView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            
+        }
+
+        private void pictureEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

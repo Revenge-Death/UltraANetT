@@ -54,15 +54,14 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.firstName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemProgressBar = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
+            this.proStop = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemPictureEdit = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
-            this.repositoryItemImageEdit = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
-            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.ProRun = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
             this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -91,11 +90,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProRun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -314,6 +312,7 @@
             this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit.Size = new System.Drawing.Size(24, 24);
             this.pictureEdit.TabIndex = 96;
+            this.pictureEdit.EditValueChanged += new System.EventHandler(this.pictureEdit_EditValueChanged);
             this.pictureEdit.Click += new System.EventHandler(this.pictureEdit_Click);
             // 
             // hyperlinkLabelControl1
@@ -353,11 +352,10 @@
             this.gridControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemProgressBar,
-            this.repositoryItemImageEdit,
             this.repositoryItemPictureEdit,
-            this.repositoryItemCheckEdit,
-            this.repositoryItemHyperLinkEdit1});
+            this.repositoryItemHyperLinkEdit1,
+            this.ProRun,
+            this.proStop});
             this.gridControl.Size = new System.Drawing.Size(819, 364);
             this.gridControl.TabIndex = 71;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -391,9 +389,11 @@
             this.gridView.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView.OptionsSelection.MultiSelect = true;
             this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
             this.gridView.OptionsView.RowAutoHeight = true;
             this.gridView.OptionsView.ShowGroupPanel = false;
             this.gridView.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_RowStyle);
+            this.gridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView_CellValueChanged);
             // 
             // gvTestName
             // 
@@ -422,21 +422,18 @@
             // firstName
             // 
             this.firstName.Caption = "测试进度";
-            this.firstName.ColumnEdit = this.repositoryItemProgressBar;
+            this.firstName.ColumnEdit = this.proStop;
             this.firstName.FieldName = "testProgress";
             this.firstName.Name = "firstName";
             this.firstName.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.firstName.Visible = true;
             this.firstName.VisibleIndex = 4;
             // 
-            // repositoryItemProgressBar
+            // proStop
             // 
-            this.repositoryItemProgressBar.AutoHeight = true;
-            this.repositoryItemProgressBar.LookAndFeel.SkinName = "Office 2016 Colorful";
-            this.repositoryItemProgressBar.Name = "repositoryItemProgressBar";
-            this.repositoryItemProgressBar.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
-            this.repositoryItemProgressBar.ReadOnly = true;
-            this.repositoryItemProgressBar.ShowTitle = true;
+            this.proStop.MarqueeWidth = 35;
+            this.proStop.Name = "proStop";
+            this.proStop.Stopped = true;
             // 
             // gridColumn4
             // 
@@ -486,17 +483,11 @@
             this.repositoryItemHyperLinkEdit1.AutoHeight = false;
             this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
             // 
-            // repositoryItemImageEdit
+            // ProRun
             // 
-            this.repositoryItemImageEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemImageEdit.Name = "repositoryItemImageEdit";
-            this.repositoryItemImageEdit.ReadOnly = true;
-            // 
-            // repositoryItemCheckEdit
-            // 
-            this.repositoryItemCheckEdit.AutoHeight = false;
-            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
+            this.ProRun.AllowFocused = false;
+            this.ProRun.MarqueeWidth = 35;
+            this.ProRun.Name = "ProRun";
             // 
             // comboBoxEdit3
             // 
@@ -691,11 +682,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProRun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
@@ -733,15 +723,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn firstName;
-        private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
@@ -766,5 +753,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar ProRun;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar proStop;
     }
 }

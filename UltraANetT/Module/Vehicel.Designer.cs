@@ -52,7 +52,7 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.navContain = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.vehicelTree1 = new UltraANetT.Control.VehicelTree();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -72,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             this.navBarControl.SuspendLayout();
-            this.navBarGroupControlContainer1.SuspendLayout();
+            this.navContain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -154,7 +154,7 @@
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(736, 4);
+            this.simpleButton1.Location = new System.Drawing.Point(740, 4);
             this.simpleButton1.LookAndFeel.SkinName = "Office 2016 Colorful";
             this.simpleButton1.MaximumSize = new System.Drawing.Size(39, 45);
             this.simpleButton1.MinimumSize = new System.Drawing.Size(39, 45);
@@ -178,7 +178,7 @@
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl.Size = new System.Drawing.Size(776, 498);
+            this.gridControl.Size = new System.Drawing.Size(780, 501);
             this.gridControl.TabIndex = 4;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -211,7 +211,6 @@
             this.gridView.OptionsFind.AlwaysVisible = true;
             this.gridView.OptionsSelection.MultiSelect = true;
             this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridView.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
@@ -301,7 +300,7 @@
             // navBarControl
             // 
             this.navBarControl.ActiveGroup = this.navBarGroup;
-            this.navBarControl.Controls.Add(this.navBarGroupControlContainer1);
+            this.navBarControl.Controls.Add(this.navContain);
             this.navBarControl.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup});
@@ -319,24 +318,25 @@
             this.navBarGroup.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.navBarGroup.Appearance.Options.UseFont = true;
             this.navBarGroup.Caption = "车型列表";
-            this.navBarGroup.ControlContainer = this.navBarGroupControlContainer1;
+            this.navBarGroup.ControlContainer = this.navContain;
             this.navBarGroup.Expanded = true;
             this.navBarGroup.GroupClientHeight = 460;
             this.navBarGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
             this.navBarGroup.Name = "navBarGroup";
             // 
-            // navBarGroupControlContainer1
+            // navContain
             // 
-            this.navBarGroupControlContainer1.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.navBarGroupControlContainer1.Appearance.Options.UseBackColor = true;
-            this.navBarGroupControlContainer1.Controls.Add(this.vehicelTree1);
-            this.navBarGroupControlContainer1.MinimumSize = new System.Drawing.Size(0, 300);
-            this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            this.navBarGroupControlContainer1.Size = new System.Drawing.Size(204, 453);
-            this.navBarGroupControlContainer1.TabIndex = 0;
+            this.navContain.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.navContain.Appearance.Options.UseBackColor = true;
+            this.navContain.Controls.Add(this.vehicelTree1);
+            this.navContain.MinimumSize = new System.Drawing.Size(5, 300);
+            this.navContain.Name = "navContain";
+            this.navContain.Size = new System.Drawing.Size(204, 453);
+            this.navContain.TabIndex = 0;
             // 
             // vehicelTree1
             // 
+            this.vehicelTree1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.vehicelTree1.Location = new System.Drawing.Point(-4, 0);
             this.vehicelTree1.Name = "vehicelTree1";
             this.vehicelTree1.Size = new System.Drawing.Size(205, 450);
@@ -413,7 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             this.navBarControl.ResumeLayout(false);
-            this.navBarGroupControlContainer1.ResumeLayout(false);
+            this.navContain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -429,7 +429,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup;
-        private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
+        private DevExpress.XtraNavBar.NavBarGroupControlContainer navContain;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private Control.VehicelTree vehicelTree1;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;

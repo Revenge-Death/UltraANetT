@@ -242,7 +242,6 @@
             // 
             // pictEm
             // 
-            this.pictEm.EditValue = global::UltraANetT.Properties.Resources._8;
             resources.ApplyResources(this.pictEm, "pictEm");
             this.pictEm.Name = "pictEm";
             this.pictEm.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;

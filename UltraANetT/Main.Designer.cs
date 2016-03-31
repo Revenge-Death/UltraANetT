@@ -39,9 +39,9 @@
             this.iClose = new DevExpress.XtraBars.BarButtonItem();
             this.btEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.iSave = new DevExpress.XtraBars.BarButtonItem();
-            this.iSaveAs = new DevExpress.XtraBars.BarButtonItem();
+            this.btDeptMge = new DevExpress.XtraBars.BarButtonItem();
             this.iHelp = new DevExpress.XtraBars.BarButtonItem();
-            this.iAbout = new DevExpress.XtraBars.BarButtonItem();
+            this.Manual = new DevExpress.XtraBars.BarButtonItem();
             this.siStatus = new DevExpress.XtraBars.BarStaticItem();
             this.siInfo = new DevExpress.XtraBars.BarStaticItem();
             this.alignButtonGroup = new DevExpress.XtraBars.BarButtonGroup();
@@ -58,23 +58,37 @@
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.btStatistics = new DevExpress.XtraBars.BarButtonItem();
+            this.btDeviceInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.btDeviceCheck = new DevExpress.XtraBars.BarButtonItem();
+            this.btTools = new DevExpress.XtraBars.BarButtonItem();
+            this.btLog = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.btModifyPwd = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.DLAF = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -97,10 +111,10 @@
             this.iClose,
             this.btEmployee,
             this.iSave,
-            this.iSaveAs,
+            this.btDeptMge,
             this.iExit,
             this.iHelp,
-            this.iAbout,
+            this.Manual,
             this.siStatus,
             this.siInfo,
             this.alignButtonGroup,
@@ -117,11 +131,19 @@
             this.barMdiChildrenListItem1,
             this.barHeaderItem1,
             this.barStaticItem2,
-            this.skinRibbonGalleryBarItem1});
+            this.btStatistics,
+            this.btDeviceInfo,
+            this.btDeviceCheck,
+            this.btTools,
+            this.btLog,
+            this.barButtonItem7,
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.btModifyPwd});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.ribbonControl.MaxItemId = 2;
+            this.ribbonControl.MaxItemId = 12;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageHeaderItemLinks.Add(this.barStaticItem1);
             this.ribbonControl.PageHeaderItemLinks.Add(this.SkinView);
@@ -260,21 +282,22 @@
             this.iSave.LargeWidth = 80;
             this.iSave.Name = "iSave";
             // 
-            // iSaveAs
+            // btDeptMge
             // 
-            this.iSaveAs.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.iSaveAs.Caption = "部门管理";
-            this.iSaveAs.Description = "Saves the active document in a different location.";
-            this.iSaveAs.Hint = "Saves the active document in a different location";
-            this.iSaveAs.Id = 17;
-            this.iSaveAs.ImageIndex = 5;
-            this.iSaveAs.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iSaveAs.ItemAppearance.Hovered.Options.UseFont = true;
-            this.iSaveAs.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.iSaveAs.ItemAppearance.Normal.Options.UseFont = true;
-            this.iSaveAs.LargeImageIndex = 5;
-            this.iSaveAs.LargeWidth = 80;
-            this.iSaveAs.Name = "iSaveAs";
+            this.btDeptMge.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btDeptMge.Caption = "部门管理";
+            this.btDeptMge.Description = "Saves the active document in a different location.";
+            this.btDeptMge.Hint = "Saves the active document in a different location";
+            this.btDeptMge.Id = 17;
+            this.btDeptMge.ImageIndex = 5;
+            this.btDeptMge.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeptMge.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btDeptMge.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.btDeptMge.ItemAppearance.Normal.Options.UseFont = true;
+            this.btDeptMge.LargeImageIndex = 5;
+            this.btDeptMge.LargeWidth = 80;
+            this.btDeptMge.Name = "btDeptMge";
+            this.btDeptMge.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btDeptMge_ItemClick);
             // 
             // iHelp
             // 
@@ -295,21 +318,22 @@
             this.iHelp.Name = "iHelp";
             this.iHelp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iHelp_ItemClick);
             // 
-            // iAbout
+            // Manual
             // 
-            this.iAbout.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            this.iAbout.Caption = "手动测试";
-            this.iAbout.Description = "Displays general program information.";
-            this.iAbout.Hint = "Displays general program information";
-            this.iAbout.Id = 24;
-            this.iAbout.ImageIndex = 8;
-            this.iAbout.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.iAbout.ItemAppearance.Hovered.Options.UseFont = true;
-            this.iAbout.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.iAbout.ItemAppearance.Normal.Options.UseFont = true;
-            this.iAbout.LargeImageIndex = 8;
-            this.iAbout.LargeWidth = 80;
-            this.iAbout.Name = "iAbout";
+            this.Manual.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.Manual.Caption = "手动测试";
+            this.Manual.Description = "Displays general program information.";
+            this.Manual.Hint = "Displays general program information";
+            this.Manual.Id = 24;
+            this.Manual.ImageIndex = 8;
+            this.Manual.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.Manual.ItemAppearance.Hovered.Options.UseFont = true;
+            this.Manual.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.Manual.ItemAppearance.Normal.Options.UseFont = true;
+            this.Manual.LargeImageIndex = 8;
+            this.Manual.LargeWidth = 80;
+            this.Manual.Name = "Manual";
+            this.Manual.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Manual_ItemClick);
             // 
             // siStatus
             // 
@@ -447,11 +471,124 @@
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // skinRibbonGalleryBarItem1
+            // btStatistics
             // 
-            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-            this.skinRibbonGalleryBarItem1.Id = 1;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            this.btStatistics.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btStatistics.Caption = "查看报告";
+            this.btStatistics.Id = 3;
+            this.btStatistics.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStatistics.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btStatistics.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStatistics.ItemAppearance.Normal.Options.UseFont = true;
+            this.btStatistics.LargeImageIndex = 3;
+            this.btStatistics.Name = "btStatistics";
+            this.btStatistics.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btStatistics_ItemClick);
+            // 
+            // btDeviceInfo
+            // 
+            this.btDeviceInfo.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btDeviceInfo.Caption = "硬件配置";
+            this.btDeviceInfo.Id = 4;
+            this.btDeviceInfo.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeviceInfo.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btDeviceInfo.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeviceInfo.ItemAppearance.Normal.Options.UseFont = true;
+            this.btDeviceInfo.LargeImageIndex = 4;
+            this.btDeviceInfo.LargeWidth = 80;
+            this.btDeviceInfo.Name = "btDeviceInfo";
+            this.btDeviceInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btDeviceInfo_ItemClick);
+            // 
+            // btDeviceCheck
+            // 
+            this.btDeviceCheck.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btDeviceCheck.Caption = "硬件自检";
+            this.btDeviceCheck.Id = 5;
+            this.btDeviceCheck.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeviceCheck.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btDeviceCheck.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeviceCheck.ItemAppearance.Normal.Options.UseFont = true;
+            this.btDeviceCheck.LargeImageIndex = 7;
+            this.btDeviceCheck.LargeWidth = 80;
+            this.btDeviceCheck.Name = "btDeviceCheck";
+            this.btDeviceCheck.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btDeviceCheck_ItemClick);
+            // 
+            // btTools
+            // 
+            this.btTools.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btTools.Caption = "工具选择";
+            this.btTools.Id = 6;
+            this.btTools.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTools.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btTools.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTools.ItemAppearance.Normal.Options.UseFont = true;
+            this.btTools.LargeImageIndex = 1;
+            this.btTools.LargeWidth = 80;
+            this.btTools.Name = "btTools";
+            this.btTools.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btTools_ItemClick);
+            // 
+            // btLog
+            // 
+            this.btLog.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btLog.Caption = "登陆日志";
+            this.btLog.Id = 7;
+            this.btLog.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLog.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btLog.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btLog.ItemAppearance.Normal.Options.UseFont = true;
+            this.btLog.LargeImageIndex = 2;
+            this.btLog.LargeWidth = 80;
+            this.btLog.Name = "btLog";
+            this.btLog.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btLog_ItemClick);
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItem7.Caption = "操作日志";
+            this.barButtonItem7.Id = 8;
+            this.barButtonItem7.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barButtonItem7.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem7.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barButtonItem7.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem7.LargeImageIndex = 5;
+            this.barButtonItem7.LargeWidth = 80;
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "barButtonItem8";
+            this.barButtonItem8.Id = 9;
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItem9.Caption = "车型日志";
+            this.barButtonItem9.Id = 10;
+            this.barButtonItem9.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barButtonItem9.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem9.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barButtonItem9.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem9.LargeImageIndex = 3;
+            this.barButtonItem9.LargeWidth = 80;
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // btModifyPwd
+            // 
+            this.btModifyPwd.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.btModifyPwd.Caption = "密码修改";
+            this.btModifyPwd.Id = 11;
+            this.btModifyPwd.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btModifyPwd.ItemAppearance.Hovered.Options.UseFont = true;
+            this.btModifyPwd.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btModifyPwd.ItemAppearance.Normal.Options.UseFont = true;
+            this.btModifyPwd.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btModifyPwd.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.btModifyPwd.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btModifyPwd.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.btModifyPwd.LargeImageIndex = 8;
+            this.btModifyPwd.LargeWidth = 80;
+            this.btModifyPwd.Name = "btModifyPwd";
+            this.btModifyPwd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btModifyPwd_ItemClick);
             // 
             // ribbonImageCollectionLarge
             // 
@@ -481,7 +618,7 @@
             this.fileRibbonPageGroup.ItemLinks.Add(this.iNew, true);
             this.fileRibbonPageGroup.ItemLinks.Add(this.btEmployee);
             this.fileRibbonPageGroup.ItemLinks.Add(this.iSave);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iSaveAs);
+            this.fileRibbonPageGroup.ItemLinks.Add(this.btDeptMge);
             this.fileRibbonPageGroup.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.TwoRows;
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "车型管理";
@@ -498,7 +635,7 @@
             // helpRibbonPageGroup
             // 
             this.helpRibbonPageGroup.ItemLinks.Add(this.iHelp);
-            this.helpRibbonPageGroup.ItemLinks.Add(this.iAbout);
+            this.helpRibbonPageGroup.ItemLinks.Add(this.Manual);
             this.helpRibbonPageGroup.Name = "helpRibbonPageGroup";
             this.helpRibbonPageGroup.Text = "测试管理";
             // 
@@ -506,36 +643,85 @@
             // 
             this.ribbonPage1.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.ribbonPage1.Appearance.Options.UseFont = true;
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "数据管理";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.AllowTextClipping = false;
+            this.ribbonPageGroup1.ItemLinks.Add(this.btStatistics);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Tag = "123";
+            this.ribbonPageGroup1.Text = "测试统计";
             // 
             // ribbonPage2
             // 
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.ribbonPage2.Appearance.Options.UseFont = true;
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "设备管理";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.AllowTextClipping = false;
+            this.ribbonPageGroup2.ItemLinks.Add(this.btDeviceInfo);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btDeviceCheck);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "硬件管理";
             // 
             // ribbonPage3
             // 
             this.ribbonPage3.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "工具管理";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
+            this.ribbonPageGroup3.ItemLinks.Add(this.btTools);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "工具管理";
             // 
             // ribbonPage4
             // 
             this.ribbonPage4.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.ribbonPage4.Appearance.Options.UseFont = true;
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "账号管理";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.AllowTextClipping = false;
+            this.ribbonPageGroup4.ItemLinks.Add(this.btModifyPwd);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "密码更改";
             // 
             // ribbonPage5
             // 
             this.ribbonPage5.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
             this.ribbonPage5.Appearance.Options.UseFont = true;
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "日志管理";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.AllowTextClipping = false;
+            this.ribbonPageGroup5.ItemLinks.Add(this.btLog);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "日志管理";
             // 
             // ribbonPage6
             // 
@@ -586,6 +772,22 @@
             this.pcMain.Size = new System.Drawing.Size(1022, 551);
             this.pcMain.TabIndex = 4;
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            this.barButtonItem1.Caption = "手动测试";
+            this.barButtonItem1.Description = "Displays general program information.";
+            this.barButtonItem1.Hint = "Displays general program information";
+            this.barButtonItem1.Id = 24;
+            this.barButtonItem1.ImageIndex = 8;
+            this.barButtonItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.barButtonItem1.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.LargeImageIndex = 8;
+            this.barButtonItem1.LargeWidth = 80;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
             // Main
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -623,10 +825,10 @@
         private DevExpress.XtraBars.BarButtonItem iClose;
         private DevExpress.XtraBars.BarButtonItem btEmployee;
         private DevExpress.XtraBars.BarButtonItem iSave;
-        private DevExpress.XtraBars.BarButtonItem iSaveAs;
+        private DevExpress.XtraBars.BarButtonItem btDeptMge;
         private DevExpress.XtraBars.BarButtonItem iExit;
         private DevExpress.XtraBars.BarButtonItem iHelp;
-        private DevExpress.XtraBars.BarButtonItem iAbout;
+        private DevExpress.XtraBars.BarButtonItem Manual;
         private DevExpress.XtraBars.BarStaticItem siStatus;
         private DevExpress.XtraBars.BarStaticItem siInfo;
         private DevExpress.XtraBars.BarButtonGroup alignButtonGroup;
@@ -661,6 +863,20 @@
         private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem1;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem btStatistics;
+        private DevExpress.XtraBars.BarButtonItem btDeviceInfo;
+        private DevExpress.XtraBars.BarButtonItem btDeviceCheck;
+        private DevExpress.XtraBars.BarButtonItem btTools;
+        private DevExpress.XtraBars.BarButtonItem btLog;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem btModifyPwd;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
