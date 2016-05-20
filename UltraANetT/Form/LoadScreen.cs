@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 
-namespace UltraANetT
+namespace UltraANetT.Form
 {
     public partial class LoadScreen : SplashScreen
     {
+        public enum SplashScreenCommand
+        {
+        }
+
         public LoadScreen()
         {
             InitializeComponent();
@@ -24,9 +22,5 @@ namespace UltraANetT
         }
 
         #endregion
-
-        public enum SplashScreenCommand
-        {
-        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace UltraANetT
+﻿namespace UltraANetT.Form
 {
     partial class wfMain {
         /// <summary>

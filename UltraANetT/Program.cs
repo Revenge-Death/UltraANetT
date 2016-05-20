@@ -1,26 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+using UltraANetT.Form;
 
 namespace UltraANetT
 {
-    static class Program
+    internal static class Program
     {
-        static AboutDevCompanion DevCompanion;
+        private static AboutDevCompanion DevCompanion;
+
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             DevCompanion = new AboutDevCompanion(1, false);
             DevCompanion.Run();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            DevExpress.UserSkins.BonusSkins.Register();
+            SkinManager.EnableFormSkins();
+            BonusSkins.Register();
             //UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
             Application.Run(new Main());

@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using DevExpress.LookAndFeel;
 using DevExpress.Skins;
-using DevExpress.XtraTreeList.Nodes;
+using DevExpress.XtraEditors;
 
 namespace UltraANetT.Control
 {
-    public partial class VehicelTree : DevExpress.XtraEditors.XtraUserControl
+    public partial class VehicelTree : XtraUserControl
     {
         public VehicelTree()
         {
             InitializeComponent();
-            Color controlColor = CommonSkins.GetSkin(DevExpress.LookAndFeel.UserLookAndFeel.Default).Colors.GetColor("Control");
+            var controlColor = CommonSkins.GetSkin(UserLookAndFeel.Default).Colors.GetColor("Control");
             treeList.Appearance.Empty.BackColor = controlColor;
             treeList.Appearance.Row.BackColor = controlColor;
         }
@@ -28,10 +22,10 @@ namespace UltraANetT.Control
             {
                 treeList.ContextMenuStrip = null;
 
-                DevExpress.XtraTreeList.TreeListHitInfo hInfo = treeList.CalcHitInfo(new Point(e.X, e.Y));
-                TreeListNode node = hInfo.Node;
+                var hInfo = treeList.CalcHitInfo(new Point(e.X, e.Y));
+                var node = hInfo.Node;
                 treeList.FocusedNode = node;
-                int level = node.Level;
+                var level = node.Level;
                 if (level == 0)
                     treeList.ContextMenuStrip = CMSCar;
                 else if (level == 1)

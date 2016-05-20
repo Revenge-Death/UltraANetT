@@ -45,10 +45,10 @@
             this.创建任务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除任务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RMTask = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
-            this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -94,49 +94,49 @@
             null,
             null,
             null,
-            null}, -1, 2, 2, 0);
+            null}, -1, 2, 2, 7);
             this.treeList.AppendNode(new object[] {
             "CVVT",
             null,
             null,
             null,
-            null}, 0, 4, 4, 1);
+            null}, 0, 4, 4, 11);
             this.treeList.AppendNode(new object[] {
             "JD1",
             null,
             null,
             null,
-            null}, 1, 5, 5, 2);
+            null}, 1, 5, 5, 12);
             this.treeList.AppendNode(new object[] {
             "JD2",
             null,
             null,
             null,
-            null}, 1, 3, 3, 3);
+            null}, 1, 3, 3, 12);
             this.treeList.AppendNode(new object[] {
             "E3",
             null,
             null,
             null,
-            null}, 0, 0, 0, 4);
+            null}, 0, 0, 0, 11);
             this.treeList.AppendNode(new object[] {
             "AX9",
             null,
             null,
             null,
-            null}, -1, 0, 0, 0);
+            null}, -1, 0, 0, 7);
             this.treeList.AppendNode(new object[] {
             "CVVT",
             null,
             null,
             null,
-            null}, 5, 0, 0, 5);
+            null}, 5, 0, 0, 11);
             this.treeList.AppendNode(new object[] {
             "VT",
             null,
             null,
             null,
-            null}, 5, 0, 0, 6);
+            null}, 5, 0, 0, 11);
             this.treeList.EndUnboundLoad();
             this.treeList.OptionsBehavior.Editable = false;
             this.treeList.OptionsBehavior.PopulateServiceColumns = true;
@@ -190,6 +190,12 @@
             this.imageTree.Images.SetKeyName(4, "Ribbon_Content_16x16.png");
             this.imageTree.Images.SetKeyName(5, "Ribbon_Save_16x16.png");
             this.imageTree.Images.SetKeyName(6, "Tasks_16x16.png");
+            this.imageTree.Images.SetKeyName(7, "List.png");
+            this.imageTree.Images.SetKeyName(8, "List-node.png");
+            this.imageTree.Images.SetKeyName(9, "Node.png");
+            this.imageTree.Images.SetKeyName(10, "节点列表.png");
+            this.imageTree.Images.SetKeyName(11, "Config.png");
+            this.imageTree.Images.SetKeyName(12, "节点列表.png");
             // 
             // repositoryItemButtonEdit1
             // 
@@ -248,23 +254,6 @@
             this.RMTask.Manager = this.barManager;
             this.RMTask.Name = "RMTask";
             // 
-            // barManager
-            // 
-            this.barManager.DockControls.Add(this.barDockControlTop);
-            this.barManager.DockControls.Add(this.barDockControlBottom);
-            this.barManager.DockControls.Add(this.barDockControlLeft);
-            this.barManager.DockControls.Add(this.barDockControlRight);
-            this.barManager.DockWindowTabFont = new System.Drawing.Font("华文中宋", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.barManager.Form = this;
-            this.barManager.Images = this.imageTree;
-            this.barManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5});
-            this.barManager.MaxItemId = 9;
-            // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "创建车型";
@@ -285,6 +274,23 @@
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.ImageIndex = 0;
             this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barManager
+            // 
+            this.barManager.DockControls.Add(this.barDockControlTop);
+            this.barManager.DockControls.Add(this.barDockControlBottom);
+            this.barManager.DockControls.Add(this.barDockControlLeft);
+            this.barManager.DockControls.Add(this.barDockControlRight);
+            this.barManager.DockWindowTabFont = new System.Drawing.Font("华文中宋", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.barManager.Form = this;
+            this.barManager.Images = this.imageTree;
+            this.barManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.barButtonItem5});
+            this.barManager.MaxItemId = 9;
             // 
             // barDockControlTop
             // 

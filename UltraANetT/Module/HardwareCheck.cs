@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using System.Threading;
+using DevExpress.XtraEditors;
 
 namespace UltraANetT.Module
 {
-    public partial class HardwareCheck : DevExpress.XtraEditors.XtraUserControl
+    public partial class HardwareCheck : XtraUserControl
     {
-        private delegate void SetResultValue();
         public HardwareCheck()
         {
             CheckForIllegalCrossThreadCalls = false;
@@ -22,24 +15,19 @@ namespace UltraANetT.Module
 
         private void labelControl1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
         {
-          
         }
 
         private void pictureEdit1_Click(object sender, EventArgs e)
         {
-            Thread th = new Thread(ShowResult);
+            var th = new Thread(ShowResult);
             th.Start();
-         
-
-       
         }
 
-        void ShowResult()
+        private void ShowResult()
         {
             Thread.Sleep(3000);
             lbl_1.Appearance.ForeColor = Color.Blue;
@@ -61,12 +49,8 @@ namespace UltraANetT.Module
             tog_5.IsOn = true;
 
             txtResult.Text = "未通过";
-
-            
-
-
         }
 
-
+        private delegate void SetResultValue();
     }
 }

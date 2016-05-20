@@ -30,12 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auto));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
-            this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
+            this.NodeGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.inboxItem = new DevExpress.XtraNavBar.NavBarItem();
             this.outboxItem = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
@@ -48,8 +51,8 @@
             this.pictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcAuto = new DevExpress.XtraGrid.GridControl();
+            this.gvAuto = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gvTestName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,22 +65,23 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.ProRun = new DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbTestDetail = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbTestRound = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbTestType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.userInput1 = new UltraANetT.Control.UserInput();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -88,27 +92,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAuto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProRun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestDetail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestRound.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -118,10 +123,10 @@
             this.layoutControl1.Controls.Add(this.navBarControl);
             this.layoutControl1.Controls.Add(this.panel2);
             this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.gridControl);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit3);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit2);
-            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
+            this.layoutControl1.Controls.Add(this.gcAuto);
+            this.layoutControl1.Controls.Add(this.cmbTestDetail);
+            this.layoutControl1.Controls.Add(this.cmbTestRound);
+            this.layoutControl1.Controls.Add(this.cmbTestType);
             this.layoutControl1.Controls.Add(this.userInput1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -138,7 +143,7 @@
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Location = new System.Drawing.Point(199, 445);
+            this.panelControl1.Location = new System.Drawing.Point(232, 445);
             this.panelControl1.MaximumSize = new System.Drawing.Size(100, 0);
             this.panelControl1.MinimumSize = new System.Drawing.Size(100, 23);
             this.panelControl1.Name = "panelControl1";
@@ -166,12 +171,12 @@
             // 
             // navBarControl
             // 
-            this.navBarControl.ActiveGroup = this.mailGroup;
+            this.navBarControl.ActiveGroup = this.NodeGroup;
             this.navBarControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.mailGroup});
+            this.NodeGroup});
             this.navBarControl.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.inboxItem,
             this.outboxItem,
@@ -180,30 +185,31 @@
             this.navBarSeparatorItem1,
             this.navBarSeparatorItem2});
             this.navBarControl.LargeImages = this.imageCollection;
-            this.navBarControl.Location = new System.Drawing.Point(4, 88);
+            this.navBarControl.Location = new System.Drawing.Point(10, 100);
             this.navBarControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.navBarControl.MinimumSize = new System.Drawing.Size(212, 0);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 191;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 212;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.ExplorerBar;
-            this.navBarControl.Size = new System.Drawing.Size(191, 459);
+            this.navBarControl.Size = new System.Drawing.Size(212, 441);
             this.navBarControl.SmallImages = this.imageCollection;
             this.navBarControl.StoreDefaultPaintStyleName = true;
             this.navBarControl.TabIndex = 99;
             this.navBarControl.Text = "navBarControl1";
             // 
-            // mailGroup
+            // NodeGroup
             // 
-            this.mailGroup.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
-            this.mailGroup.Appearance.Options.UseFont = true;
-            this.mailGroup.Caption = "节点列表";
-            this.mailGroup.Expanded = true;
-            this.mailGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            this.NodeGroup.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.5F);
+            this.NodeGroup.Appearance.Options.UseFont = true;
+            this.NodeGroup.Caption = "节点列表";
+            this.NodeGroup.Expanded = true;
+            this.NodeGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.inboxItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.outboxItem),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2)});
-            this.mailGroup.LargeImageIndex = 2;
-            this.mailGroup.Name = "mailGroup";
+            this.NodeGroup.LargeImageIndex = 2;
+            this.NodeGroup.Name = "NodeGroup";
             // 
             // inboxItem
             // 
@@ -219,7 +225,7 @@
             this.inboxItem.AppearancePressed.Options.UseFont = true;
             this.inboxItem.Caption = "BCM节点";
             this.inboxItem.Name = "inboxItem";
-            this.inboxItem.SmallImageIndex = 0;
+            this.inboxItem.SmallImageIndex = 3;
             this.inboxItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.inboxItem_LinkClicked);
             // 
             // outboxItem
@@ -234,7 +240,7 @@
             this.outboxItem.AppearancePressed.Options.UseFont = true;
             this.outboxItem.Caption = "PEPS节点";
             this.outboxItem.Name = "outboxItem";
-            this.outboxItem.SmallImageIndex = 1;
+            this.outboxItem.SmallImageIndex = 3;
             this.outboxItem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.outboxItem_LinkClicked);
             // 
             // navBarSeparatorItem1
@@ -277,6 +283,7 @@
             this.imageCollection.Images.SetKeyName(0, "Calendar_16x16.png");
             this.imageCollection.Images.SetKeyName(1, "Drafts_16x16.png");
             this.imageCollection.Images.SetKeyName(2, "Organizer_16x16.png");
+            this.imageCollection.Images.SetKeyName(3, "节点列表.png");
             // 
             // panel2
             // 
@@ -286,29 +293,25 @@
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.pictureEdit);
             this.panel2.Controls.Add(this.hyperlinkLabelControl1);
-            this.panel2.Location = new System.Drawing.Point(887, 443);
+            this.panel2.Location = new System.Drawing.Point(893, 443);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.MaximumSize = new System.Drawing.Size(133, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 27);
+            this.panel2.Size = new System.Drawing.Size(125, 27);
             this.panel2.TabIndex = 97;
             // 
             // pictureEdit2
             // 
-            this.pictureEdit2.EditValue = global::UltraANetT.Properties.Resources.Stop;
             this.pictureEdit2.Location = new System.Drawing.Point(38, 1);
             this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.InitialImage = global::UltraANetT.Properties.Resources.Ribbon_Info_32x32;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Size = new System.Drawing.Size(24, 24);
             this.pictureEdit2.TabIndex = 97;
             // 
             // pictureEdit
             // 
-            this.pictureEdit.EditValue = global::UltraANetT.Properties.Resources.Run;
             this.pictureEdit.Location = new System.Drawing.Point(1, 1);
             this.pictureEdit.Name = "pictureEdit";
-            this.pictureEdit.Properties.InitialImage = global::UltraANetT.Properties.Resources.Ribbon_Info_32x32;
             this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit.Size = new System.Drawing.Size(24, 24);
             this.pictureEdit.TabIndex = 96;
@@ -330,51 +333,51 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(199, 472);
+            this.textEdit1.Location = new System.Drawing.Point(232, 472);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(0);
             this.textEdit1.MinimumSize = new System.Drawing.Size(0, 75);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(819, 75);
+            this.textEdit1.Size = new System.Drawing.Size(786, 75);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 72;
             // 
-            // gridControl
+            // gcAuto
             // 
-            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gcAuto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.gridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.gridControl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl.Location = new System.Drawing.Point(199, 77);
-            this.gridControl.MainView = this.gridView;
-            this.gridControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.gridControl.Name = "gridControl";
-            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gcAuto.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcAuto.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gcAuto.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gcAuto.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gcAuto.Location = new System.Drawing.Point(232, 77);
+            this.gcAuto.MainView = this.gvAuto;
+            this.gcAuto.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.gcAuto.Name = "gcAuto";
+            this.gcAuto.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPictureEdit,
             this.repositoryItemHyperLinkEdit1,
             this.ProRun,
             this.proStop});
-            this.gridControl.Size = new System.Drawing.Size(819, 364);
-            this.gridControl.TabIndex = 71;
-            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView});
+            this.gcAuto.Size = new System.Drawing.Size(786, 364);
+            this.gcAuto.TabIndex = 71;
+            this.gcAuto.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvAuto});
             // 
-            // gridView
+            // gvAuto
             // 
-            this.gridView.Appearance.Empty.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView.Appearance.Empty.Options.UseFont = true;
-            this.gridView.Appearance.EvenRow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView.Appearance.Row.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView.Appearance.Row.Options.UseFont = true;
-            this.gridView.AppearancePrint.Row.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView.AppearancePrint.Row.Options.UseFont = true;
-            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvAuto.Appearance.Empty.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvAuto.Appearance.Empty.Options.UseFont = true;
+            this.gvAuto.Appearance.EvenRow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvAuto.Appearance.EvenRow.Options.UseFont = true;
+            this.gvAuto.Appearance.HeaderPanel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvAuto.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvAuto.Appearance.Row.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvAuto.Appearance.Row.Options.UseFont = true;
+            this.gvAuto.AppearancePrint.Row.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvAuto.AppearancePrint.Row.Options.UseFont = true;
+            this.gvAuto.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.gvAuto.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gvTestName,
             this.gridColumn2,
             this.gridColumn1,
@@ -383,17 +386,17 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn3});
-            this.gridView.GridControl = this.gridControl;
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView.OptionsSelection.MultiSelect = true;
-            this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridView.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
-            this.gridView.OptionsView.RowAutoHeight = true;
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            this.gridView.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_RowStyle);
-            this.gridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView_CellValueChanged);
+            this.gvAuto.GridControl = this.gcAuto;
+            this.gvAuto.Name = "gvAuto";
+            this.gvAuto.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gvAuto.OptionsNavigation.AutoFocusNewRow = true;
+            this.gvAuto.OptionsSelection.MultiSelect = true;
+            this.gvAuto.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gvAuto.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
+            this.gvAuto.OptionsView.RowAutoHeight = true;
+            this.gvAuto.OptionsView.ShowGroupPanel = false;
+            this.gvAuto.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_RowStyle);
+            this.gvAuto.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView_CellValueChanged);
             // 
             // gvTestName
             // 
@@ -489,54 +492,54 @@
             this.ProRun.MarqueeWidth = 35;
             this.ProRun.Name = "ProRun";
             // 
-            // comboBoxEdit3
+            // cmbTestDetail
             // 
-            this.comboBoxEdit3.EditValue = "01-CAN单节点-ESC(已测)";
-            this.comboBoxEdit3.Location = new System.Drawing.Point(4, 60);
-            this.comboBoxEdit3.MaximumSize = new System.Drawing.Size(219, 24);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(191, 24);
-            this.comboBoxEdit3.StyleController = this.layoutControl1;
-            this.comboBoxEdit3.TabIndex = 9;
+            this.cmbTestDetail.EditValue = "01-CAN单节点-ESC(已测)";
+            this.cmbTestDetail.Location = new System.Drawing.Point(10, 70);
+            this.cmbTestDetail.MaximumSize = new System.Drawing.Size(219, 24);
+            this.cmbTestDetail.Name = "cmbTestDetail";
+            this.cmbTestDetail.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbTestDetail.Properties.Appearance.Options.UseFont = true;
+            this.cmbTestDetail.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 18, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.cmbTestDetail.Size = new System.Drawing.Size(212, 26);
+            this.cmbTestDetail.StyleController = this.layoutControl1;
+            this.cmbTestDetail.TabIndex = 9;
             // 
-            // comboBoxEdit2
+            // cmbTestRound
             // 
-            this.comboBoxEdit2.EditValue = "第一轮测试";
-            this.comboBoxEdit2.Location = new System.Drawing.Point(4, 32);
-            this.comboBoxEdit2.MaximumSize = new System.Drawing.Size(219, 24);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(191, 24);
-            this.comboBoxEdit2.StyleController = this.layoutControl1;
-            this.comboBoxEdit2.TabIndex = 8;
+            this.cmbTestRound.EditValue = "第一轮测试";
+            this.cmbTestRound.Location = new System.Drawing.Point(10, 40);
+            this.cmbTestRound.MaximumSize = new System.Drawing.Size(219, 24);
+            this.cmbTestRound.Name = "cmbTestRound";
+            this.cmbTestRound.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbTestRound.Properties.Appearance.Options.UseFont = true;
+            this.cmbTestRound.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 18, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.cmbTestRound.Size = new System.Drawing.Size(212, 26);
+            this.cmbTestRound.StyleController = this.layoutControl1;
+            this.cmbTestRound.TabIndex = 8;
             // 
-            // comboBoxEdit1
+            // cmbTestType
             // 
-            this.comboBoxEdit1.EditValue = "AX7-CVVT-JD1";
-            this.comboBoxEdit1.Location = new System.Drawing.Point(4, 4);
-            this.comboBoxEdit1.MaximumSize = new System.Drawing.Size(219, 24);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(191, 24);
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            this.comboBoxEdit1.TabIndex = 7;
+            this.cmbTestType.EditValue = "AX7-CVVT-JD1";
+            this.cmbTestType.Location = new System.Drawing.Point(10, 10);
+            this.cmbTestType.MaximumSize = new System.Drawing.Size(219, 24);
+            this.cmbTestType.Name = "cmbTestType";
+            this.cmbTestType.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbTestType.Properties.Appearance.Options.UseFont = true;
+            this.cmbTestType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", 18, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.cmbTestType.Size = new System.Drawing.Size(212, 26);
+            this.cmbTestType.StyleController = this.layoutControl1;
+            this.cmbTestType.TabIndex = 7;
             // 
             // userInput1
             // 
-            this.userInput1.Location = new System.Drawing.Point(199, 4);
+            this.userInput1.Location = new System.Drawing.Point(232, 4);
             this.userInput1.MaximumSize = new System.Drawing.Size(0, 71);
             this.userInput1.Name = "userInput1";
-            this.userInput1.Size = new System.Drawing.Size(819, 69);
+            this.userInput1.Size = new System.Drawing.Size(786, 69);
             this.userInput1.TabIndex = 4;
             // 
             // layoutControlItem10
@@ -555,15 +558,12 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
             this.layoutControlItem7,
             this.emptySpaceItem2,
             this.layoutControlItem2,
             this.layoutControlItem8,
-            this.layoutControlItem3,
-            this.layoutControlItem11});
+            this.layoutControlItem11,
+            this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -573,92 +573,105 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.userInput1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(195, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(228, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(823, 73);
+            this.layoutControlItem1.Size = new System.Drawing.Size(790, 73);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.comboBoxEdit1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(195, 28);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.comboBoxEdit2;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(195, 28);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.comboBoxEdit3;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(195, 28);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.gridControl;
-            this.layoutControlItem7.Location = new System.Drawing.Point(195, 73);
+            this.layoutControlItem7.Control = this.gcAuto;
+            this.layoutControlItem7.Location = new System.Drawing.Point(228, 73);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(823, 368);
+            this.layoutControlItem7.Size = new System.Drawing.Size(790, 368);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(299, 441);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(332, 441);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(586, 27);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(559, 27);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.textEdit1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(195, 468);
+            this.layoutControlItem2.Location = new System.Drawing.Point(228, 468);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(823, 79);
+            this.layoutControlItem2.Size = new System.Drawing.Size(790, 79);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.panel2;
-            this.layoutControlItem8.Location = new System.Drawing.Point(885, 441);
+            this.layoutControlItem8.Location = new System.Drawing.Point(891, 441);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 2, 0, 0);
-            this.layoutControlItem8.Size = new System.Drawing.Size(133, 27);
+            this.layoutControlItem8.Size = new System.Drawing.Size(127, 27);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.navBarControl;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 84);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(195, 463);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.panelControl1;
-            this.layoutControlItem11.Location = new System.Drawing.Point(195, 441);
+            this.layoutControlItem11.Location = new System.Drawing.Point(228, 441);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(104, 27);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem3,
+            this.layoutControlItem6,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(228, 547);
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.navBarControl;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 90);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(216, 445);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.cmbTestDetail;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 60);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(216, 30);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.cmbTestType;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(216, 30);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.cmbTestRound;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(216, 30);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
             // Auto
             // 
@@ -680,27 +693,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAuto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proStop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProRun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestDetail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestRound.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTestType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -709,16 +723,14 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbTestDetail;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbTestRound;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbTestType;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private Control.UserInput userInput1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.GridControl gridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.GridControl gcAuto;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvAuto;
         private DevExpress.XtraGrid.Columns.GridColumn gvTestName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -740,7 +752,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraNavBar.NavBarControl navBarControl;
-        private DevExpress.XtraNavBar.NavBarGroup mailGroup;
+        private DevExpress.XtraNavBar.NavBarGroup NodeGroup;
         private DevExpress.XtraNavBar.NavBarItem inboxItem;
         private DevExpress.XtraNavBar.NavBarItem outboxItem;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
@@ -755,5 +767,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar ProRun;
         private DevExpress.XtraEditors.Repository.RepositoryItemMarqueeProgressBar proStop;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private Control.UserInput userInput1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

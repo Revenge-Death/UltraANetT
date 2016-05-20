@@ -1,23 +1,76 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace UltraANetT
 {
     public static class WinAPI
     {
+        /// <summary>
+        ///     表示 Hook 回调函数。
+        /// </summary>
+        /// <param name="nCode"></param>
+        /// <param name="wParam"></param>
+        /// <param name="lParam"></param>
+        /// <returns></returns>
+        public delegate int HookProc(int nCode, IntPtr wParam, IntPtr lParam);
+
+        /// <summary>
+        ///     鼠标事件标识。
+        /// </summary>
+        public enum MouseEventFlags
+        {
+            Move = 0x0001,
+            LeftDown = 0x0002,
+            LeftUp = 0x0004,
+            RightDown = 0x0008,
+            RightUp = 0x0010,
+            MiddleDown = 0x0020,
+            MiddleUp = 0x0040,
+            Wheel = 0x0800,
+            Absolute = 0x8000
+        }
+
+        /// <summary>
+        ///     表示进程间传递的数据结构
+        /// </summary>
+        public struct COPYDATASTRUCT
+        {
+            public IntPtr dwData;
+            public int cbData;
+            [MarshalAs(UnmanagedType.LPStr)] public string lpData;
+        }
+
+        /// <summary>
+        ///     用于通过 API 获取位置信息的结构。
+        /// </summary>
+        public struct Rect
+        {
+            public int Left;
+            public int Top;
+            public int Right;
+            public int Bottom;
+        }
+
+        /// <summary>
+        ///     与非托管通信的鼠标位置结构。
+        /// </summary>
+        [StructLayout(LayoutKind.Sequential)]
+        public struct POINT
+        {
+            public int X;
+            public int Y;
+        }
+
         #region 常量声明
 
-        public const int GWL_WNDPROC = -4;    //得到窗口回调函数的地址，或者句柄。得到后必须使用CallWindowProc函数来调用
-        public const int GWL_HINSTANCE = -6;  //得到应用程序运行实例的句柄
+        public const int GWL_WNDPROC = -4; //得到窗口回调函数的地址，或者句柄。得到后必须使用CallWindowProc函数来调用
+        public const int GWL_HINSTANCE = -6; //得到应用程序运行实例的句柄
         public const int GWL_HWNDPARENT = -8; //得到父窗口的句柄
-        public const int GWL_STYLE = -16;     //得到窗口风格
-        public const int GWL_EXSTYLE = -20;   //得到扩展的窗口风格
-        public const int GWL_USERDATA = -21;  //得到和窗口相关联的32位的值（每一个窗口都有一个有意留给创建窗口的应用程序是用的32位的值）
-        public const int GWL_ID = -12;        //得到窗口的标识符
+        public const int GWL_STYLE = -16; //得到窗口风格
+        public const int GWL_EXSTYLE = -20; //得到扩展的窗口风格
+        public const int GWL_USERDATA = -21; //得到和窗口相关联的32位的值（每一个窗口都有一个有意留给创建窗口的应用程序是用的32位的值）
+        public const int GWL_ID = -12; //得到窗口的标识符
 
         public const int DWL_MSGRESULT = 0;
         public const int DWL_DLGPROC = 4;
@@ -155,6 +208,7 @@ namespace UltraANetT
         public const int WH_MOUSELL = 0xE;
 
         public const int STATUS_SUCCESS = 0x0;
+
         #endregion
 
         #region API函数声明
@@ -175,7 +229,8 @@ namespace UltraANetT
         public static extern int SetWindowLong(IntPtr hWnd, int nIndex, int lNewLong);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
-        public static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int x, int y, int cx, int cy, int uFlags);
+        public static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int x, int y, int cx, int cy,
+            int uFlags);
 
         [DllImport("user32.dll", EntryPoint = "UpdateWindow")]
         public static extern bool UpdateWindow(IntPtr hWnd);
@@ -238,83 +293,29 @@ namespace UltraANetT
         public static extern int GetDoubleClickTime();
 
         [DllImport("user32.dll", EntryPoint = "FindWindow")]
-        public extern static IntPtr FindWindow(string lpClassName, string lpWindowName);
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
         [DllImport("user32.dll", EntryPoint = "FindWindow")]
-        public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
+        public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass,
+            string lpszWindow);
+
         #endregion
-
-        /// <summary>
-        /// 表示 Hook 回调函数。
-        /// </summary>
-        /// <param name="nCode"></param>
-        /// <param name="wParam"></param>
-        /// <param name="lParam"></param>
-        /// <returns></returns>
-        public delegate int HookProc(int nCode, IntPtr wParam, IntPtr lParam);
-        /// <summary>
-        /// 表示进程间传递的数据结构
-        /// </summary>
-        public struct COPYDATASTRUCT
-        {
-            public IntPtr dwData;
-            public int cbData;
-            [MarshalAs(UnmanagedType.LPStr)]
-            public string lpData;
-        }
-
-        /// <summary>
-        /// 用于通过 API 获取位置信息的结构。
-        /// </summary>
-        public struct Rect
-        {
-            public int Left;
-            public int Top;
-            public int Right;
-            public int Bottom;
-        }
-
-        /// <summary>
-        /// 与非托管通信的鼠标位置结构。
-        /// </summary>
-        [StructLayout(LayoutKind.Sequential)]
-        public struct POINT
-        {
-            public int X;
-            public int Y;
-        }
-
-        /// <summary>
-        /// 鼠标事件标识。
-        /// </summary>
-        public enum MouseEventFlags
-        {
-            Move = 0x0001,
-            LeftDown = 0x0002,
-            LeftUp = 0x0004,
-            RightDown = 0x0008,
-            RightUp = 0x0010,
-            MiddleDown = 0x0020,
-            MiddleUp = 0x0040,
-            Wheel = 0x0800,
-            Absolute = 0x8000
-        }
     }
 
     /// <summary>
-    /// DevExpress 控件毒手伴侣（专门用来检测关闭它的注册弹框）。
+    ///     DevExpress 控件毒手伴侣（专门用来检测关闭它的注册弹框）。
     /// </summary>
     public class AboutDevCompanion
     {
-        private int Interval;
-        private bool ResidentMode;
-        private bool StopCompanion;
+        private readonly int Interval;
         private Thread m_Thread;
+        private readonly bool ResidentMode;
+        private bool StopCompanion;
 
         /// <summary>
-        /// 按指定的模式创建 <see cref="Wunion.Budget.PowerBasicFramework.AboutDevCompanion"/> 对象实例。
-        /// <param name="interval">检测Dev注册弹框的时间间隔（以毫秒为单位）。</param>
-        /// <param name="resident">检测程序是否以常驻模式运行（默认值 true）。</param>
+        ///     按指定的模式创建 <see cref="Wunion.Budget.PowerBasicFramework.AboutDevCompanion" /> 对象实例。
+        ///     <param name="interval">检测Dev注册弹框的时间间隔（以毫秒为单位）。</param>
+        ///     <param name="resident">检测程序是否以常驻模式运行（默认值 true）。</param>
         /// </summary>
         public AboutDevCompanion(int interval, bool resident = true)
         {
@@ -324,12 +325,12 @@ namespace UltraANetT
         }
 
         /// <summary>
-        /// 关闭 DevExpress 控件的注册弹框（如果调用时找到并关闭了DevExpress注册弹框则返回true，否则返回false）。
+        ///     关闭 DevExpress 控件的注册弹框（如果调用时找到并关闭了DevExpress注册弹框则返回true，否则返回false）。
         /// </summary>
         /// <returns></returns>
         private bool CloseAboutDev()
         {
-            IntPtr devHwnd = WinAPI.FindWindow(null, "About DevExpress");
+            var devHwnd = WinAPI.FindWindow(null, "About DevExpress");
             if (devHwnd != IntPtr.Zero)
             {
                 WinAPI.SendMessage(devHwnd, WinAPI.WM_CLOSE, 0, 0);
@@ -339,14 +340,15 @@ namespace UltraANetT
         }
 
         /// <summary>
-        /// 运行 Dev 伴侣，对其注册弹框下毒手。
+        ///     运行 Dev 伴侣，对其注册弹框下毒手。
         /// </summary>
         public void Run()
         {
             if (!StopCompanion)
                 return; // 防止多次运行导致可能的线程错误。
             StopCompanion = false;
-            m_Thread = new Thread(new ThreadStart(() => {
+            m_Thread = new Thread(() =>
+            {
                 while (!StopCompanion)
                 {
                     if (ResidentMode)
@@ -356,12 +358,12 @@ namespace UltraANetT
                     Thread.Sleep(Interval);
                 }
                 m_Thread = null;
-            }));
+            });
             m_Thread.Start();
         }
 
         /// <summary>
-        /// 关闭毒手程序的运行。
+        ///     关闭毒手程序的运行。
         /// </summary>
         public void Stop()
         {

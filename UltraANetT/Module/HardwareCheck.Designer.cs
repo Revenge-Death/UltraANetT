@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.pro_5 = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.pro_4 = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.pro_3 = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.pro_2 = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
+            this.pro_1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.lbl_5 = new DevExpress.XtraEditors.LabelControl();
             this.lbl_4 = new DevExpress.XtraEditors.LabelControl();
             this.lbl_3 = new DevExpress.XtraEditors.LabelControl();
@@ -55,7 +61,10 @@
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtResult = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -64,6 +73,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -71,6 +81,7 @@
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -78,6 +89,7 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -85,30 +97,19 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
-            this.layoutControlItem33 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pro_2 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pro_3 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pro_4 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pro_5 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pro_1 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_3.Properties)).BeginInit();
@@ -120,7 +121,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tog_1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtResult.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
@@ -129,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -136,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
@@ -143,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
@@ -150,23 +157,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -215,13 +215,135 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // pro_5
+            // 
+            this.pro_5.AnimationToTextDistance = 10;
+            this.pro_5.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pro_5.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_5.Appearance.Options.UseBackColor = true;
+            this.pro_5.Appearance.Options.UseFont = true;
+            this.pro_5.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_5.AppearanceCaption.Options.UseFont = true;
+            this.pro_5.Caption = "正在检测...";
+            this.pro_5.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pro_5.Description = "";
+            this.pro_5.Location = new System.Drawing.Point(434, 449);
+            this.pro_5.MinimumSize = new System.Drawing.Size(0, 40);
+            this.pro_5.Name = "pro_5";
+            this.pro_5.ShowDescription = false;
+            this.pro_5.Size = new System.Drawing.Size(168, 40);
+            this.pro_5.StyleController = this.layoutControl1;
+            this.pro_5.TabIndex = 43;
+            this.pro_5.Text = "progressPanel5";
+            this.pro_5.Visible = false;
+            this.pro_5.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
+            // 
+            // pro_4
+            // 
+            this.pro_4.AnimationToTextDistance = 10;
+            this.pro_4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pro_4.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_4.Appearance.Options.UseBackColor = true;
+            this.pro_4.Appearance.Options.UseFont = true;
+            this.pro_4.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_4.AppearanceCaption.Options.UseFont = true;
+            this.pro_4.Caption = "正在检测...";
+            this.pro_4.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pro_4.Description = "";
+            this.pro_4.Location = new System.Drawing.Point(434, 360);
+            this.pro_4.MinimumSize = new System.Drawing.Size(0, 40);
+            this.pro_4.Name = "pro_4";
+            this.pro_4.ShowDescription = false;
+            this.pro_4.Size = new System.Drawing.Size(168, 40);
+            this.pro_4.StyleController = this.layoutControl1;
+            this.pro_4.TabIndex = 42;
+            this.pro_4.Text = "progressPanel4";
+            this.pro_4.Visible = false;
+            this.pro_4.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
+            // 
+            // pro_3
+            // 
+            this.pro_3.AnimationToTextDistance = 10;
+            this.pro_3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pro_3.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_3.Appearance.Options.UseBackColor = true;
+            this.pro_3.Appearance.Options.UseFont = true;
+            this.pro_3.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_3.AppearanceCaption.Options.UseFont = true;
+            this.pro_3.Caption = "正在检测...";
+            this.pro_3.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pro_3.Description = "";
+            this.pro_3.Location = new System.Drawing.Point(434, 271);
+            this.pro_3.MinimumSize = new System.Drawing.Size(0, 40);
+            this.pro_3.Name = "pro_3";
+            this.pro_3.ShowDescription = false;
+            this.pro_3.Size = new System.Drawing.Size(168, 40);
+            this.pro_3.StyleController = this.layoutControl1;
+            this.pro_3.TabIndex = 41;
+            this.pro_3.Text = "progressPanel3";
+            this.pro_3.Visible = false;
+            this.pro_3.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
+            // 
+            // pro_2
+            // 
+            this.pro_2.AnimationToTextDistance = 10;
+            this.pro_2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pro_2.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pro_2.Appearance.Options.UseBackColor = true;
+            this.pro_2.Appearance.Options.UseFont = true;
+            this.pro_2.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pro_2.AppearanceCaption.Options.UseFont = true;
+            this.pro_2.Caption = "正在检测...";
+            this.pro_2.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pro_2.Description = "";
+            this.pro_2.Location = new System.Drawing.Point(434, 182);
+            this.pro_2.MaximumSize = new System.Drawing.Size(168, 0);
+            this.pro_2.MinimumSize = new System.Drawing.Size(0, 40);
+            this.pro_2.Name = "pro_2";
+            this.pro_2.ShowDescription = false;
+            this.pro_2.Size = new System.Drawing.Size(166, 40);
+            this.pro_2.StyleController = this.layoutControl1;
+            this.pro_2.TabIndex = 40;
+            this.pro_2.Text = "progressPanel2";
+            this.pro_2.Visible = false;
+            this.pro_2.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
+            // 
+            // progressBarControl1
+            // 
+            this.progressBarControl1.Location = new System.Drawing.Point(435, 182);
+            this.progressBarControl1.Name = "progressBarControl1";
+            this.progressBarControl1.Size = new System.Drawing.Size(50, 18);
+            this.progressBarControl1.StyleController = this.layoutControl1;
+            this.progressBarControl1.TabIndex = 39;
+            // 
+            // pro_1
+            // 
+            this.pro_1.AnimationToTextDistance = 10;
+            this.pro_1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pro_1.Appearance.Options.UseBackColor = true;
+            this.pro_1.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pro_1.AppearanceCaption.Options.UseFont = true;
+            this.pro_1.Caption = "正在检测...";
+            this.pro_1.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pro_1.Location = new System.Drawing.Point(434, 93);
+            this.pro_1.MinimumSize = new System.Drawing.Size(0, 40);
+            this.pro_1.Name = "pro_1";
+            this.pro_1.ShowDescription = false;
+            this.pro_1.Size = new System.Drawing.Size(168, 40);
+            this.pro_1.StyleController = this.layoutControl1;
+            this.pro_1.TabIndex = 38;
+            this.pro_1.Text = "progressPanel1";
+            this.pro_1.Visible = false;
+            this.pro_1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
+            // 
             // lbl_5
             // 
             this.lbl_5.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lbl_5.Location = new System.Drawing.Point(778, 457);
+            this.lbl_5.Location = new System.Drawing.Point(787, 457);
+            this.lbl_5.MinimumSize = new System.Drawing.Size(61, 0);
             this.lbl_5.Name = "lbl_5";
-            this.lbl_5.Size = new System.Drawing.Size(60, 20);
+            this.lbl_5.Size = new System.Drawing.Size(61, 20);
             this.lbl_5.StyleController = this.layoutControl1;
             this.lbl_5.TabIndex = 37;
             this.lbl_5.Text = "等待自检";
@@ -231,9 +353,10 @@
             // 
             this.lbl_4.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lbl_4.Location = new System.Drawing.Point(780, 368);
+            this.lbl_4.Location = new System.Drawing.Point(787, 368);
+            this.lbl_4.MinimumSize = new System.Drawing.Size(61, 0);
             this.lbl_4.Name = "lbl_4";
-            this.lbl_4.Size = new System.Drawing.Size(60, 20);
+            this.lbl_4.Size = new System.Drawing.Size(61, 20);
             this.lbl_4.StyleController = this.layoutControl1;
             this.lbl_4.TabIndex = 36;
             this.lbl_4.Text = "等待自检";
@@ -243,9 +366,10 @@
             // 
             this.lbl_3.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lbl_3.Location = new System.Drawing.Point(781, 279);
+            this.lbl_3.Location = new System.Drawing.Point(787, 279);
+            this.lbl_3.MinimumSize = new System.Drawing.Size(61, 0);
             this.lbl_3.Name = "lbl_3";
-            this.lbl_3.Size = new System.Drawing.Size(60, 20);
+            this.lbl_3.Size = new System.Drawing.Size(61, 20);
             this.lbl_3.StyleController = this.layoutControl1;
             this.lbl_3.TabIndex = 35;
             this.lbl_3.Text = "等待自检";
@@ -255,9 +379,10 @@
             // 
             this.lbl_2.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lbl_2.Location = new System.Drawing.Point(784, 190);
+            this.lbl_2.Location = new System.Drawing.Point(785, 190);
+            this.lbl_2.MinimumSize = new System.Drawing.Size(61, 0);
             this.lbl_2.Name = "lbl_2";
-            this.lbl_2.Size = new System.Drawing.Size(60, 20);
+            this.lbl_2.Size = new System.Drawing.Size(61, 20);
             this.lbl_2.StyleController = this.layoutControl1;
             this.lbl_2.TabIndex = 34;
             this.lbl_2.Text = "等待自检";
@@ -265,49 +390,49 @@
             // 
             // tog_5
             // 
-            this.tog_5.Location = new System.Drawing.Point(615, 457);
+            this.tog_5.Location = new System.Drawing.Point(614, 457);
             this.tog_5.Name = "tog_5";
             this.tog_5.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tog_5.Properties.Appearance.Options.UseFont = true;
             this.tog_5.Properties.OffText = "未通过";
             this.tog_5.Properties.OnText = "通过";
-            this.tog_5.Size = new System.Drawing.Size(143, 26);
+            this.tog_5.Size = new System.Drawing.Size(153, 26);
             this.tog_5.StyleController = this.layoutControl1;
             this.tog_5.TabIndex = 29;
             // 
             // tog_4
             // 
-            this.tog_4.Location = new System.Drawing.Point(615, 368);
+            this.tog_4.Location = new System.Drawing.Point(614, 368);
             this.tog_4.Name = "tog_4";
             this.tog_4.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tog_4.Properties.Appearance.Options.UseFont = true;
             this.tog_4.Properties.OffText = "未通过";
             this.tog_4.Properties.OnText = "通过";
-            this.tog_4.Size = new System.Drawing.Size(145, 26);
+            this.tog_4.Size = new System.Drawing.Size(153, 26);
             this.tog_4.StyleController = this.layoutControl1;
             this.tog_4.TabIndex = 28;
             // 
             // tog_3
             // 
-            this.tog_3.Location = new System.Drawing.Point(615, 279);
+            this.tog_3.Location = new System.Drawing.Point(614, 279);
             this.tog_3.Name = "tog_3";
             this.tog_3.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tog_3.Properties.Appearance.Options.UseFont = true;
             this.tog_3.Properties.OffText = "未通过";
             this.tog_3.Properties.OnText = "通过";
-            this.tog_3.Size = new System.Drawing.Size(146, 26);
+            this.tog_3.Size = new System.Drawing.Size(153, 26);
             this.tog_3.StyleController = this.layoutControl1;
             this.tog_3.TabIndex = 27;
             // 
             // tog_2
             // 
-            this.tog_2.Location = new System.Drawing.Point(613, 190);
+            this.tog_2.Location = new System.Drawing.Point(612, 190);
             this.tog_2.Name = "tog_2";
             this.tog_2.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tog_2.Properties.Appearance.Options.UseFont = true;
             this.tog_2.Properties.OffText = "未通过";
             this.tog_2.Properties.OnText = "通过";
-            this.tog_2.Size = new System.Drawing.Size(151, 26);
+            this.tog_2.Size = new System.Drawing.Size(153, 26);
             this.tog_2.StyleController = this.layoutControl1;
             this.tog_2.TabIndex = 26;
             // 
@@ -320,7 +445,7 @@
             this.comboBoxEdit5.Properties.Appearance.Options.UseFont = true;
             this.comboBoxEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit5.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxEdit5.Size = new System.Drawing.Size(136, 26);
             this.comboBoxEdit5.StyleController = this.layoutControl1;
             this.comboBoxEdit5.TabIndex = 25;
             // 
@@ -333,7 +458,7 @@
             this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
             this.comboBoxEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit4.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxEdit4.Size = new System.Drawing.Size(136, 26);
             this.comboBoxEdit4.StyleController = this.layoutControl1;
             this.comboBoxEdit4.TabIndex = 24;
             // 
@@ -346,14 +471,14 @@
             this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
             this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxEdit3.Size = new System.Drawing.Size(136, 26);
             this.comboBoxEdit3.StyleController = this.layoutControl1;
             this.comboBoxEdit3.TabIndex = 23;
             // 
             // comboBoxEdit2
             // 
             this.comboBoxEdit2.EditValue = "COM1";
-            this.comboBoxEdit2.Location = new System.Drawing.Point(287, 190);
+            this.comboBoxEdit2.Location = new System.Drawing.Point(286, 190);
             this.comboBoxEdit2.Name = "comboBoxEdit2";
             this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
@@ -400,7 +525,7 @@
             // 
             this.hyperlinkLabelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.hyperlinkLabelControl2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(205, 192);
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(204, 192);
             this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
             this.hyperlinkLabelControl2.Size = new System.Drawing.Size(60, 20);
             this.hyperlinkLabelControl2.StyleController = this.layoutControl1;
@@ -440,7 +565,8 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelControl3.Location = new System.Drawing.Point(138, 190);
+            this.labelControl3.Location = new System.Drawing.Point(137, 190);
+            this.labelControl3.MinimumSize = new System.Drawing.Size(45, 0);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 20);
             this.labelControl3.StyleController = this.layoutControl1;
@@ -526,6 +652,31 @@
             this.txtResult.StyleController = this.layoutControl1;
             this.txtResult.TabIndex = 5;
             // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Location = new System.Drawing.Point(228, 20);
+            this.pictureEdit1.MaximumSize = new System.Drawing.Size(60, 30);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(55, 30);
+            this.pictureEdit1.StyleController = this.layoutControl1;
+            this.pictureEdit1.TabIndex = 4;
+            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
+            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
+            // 
+            // layoutControlItem33
+            // 
+            this.layoutControlItem33.Control = this.progressBarControl1;
+            this.layoutControlItem33.Location = new System.Drawing.Point(411, 0);
+            this.layoutControlItem33.Name = "layoutControlItem33";
+            this.layoutControlItem33.Size = new System.Drawing.Size(54, 46);
+            this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem33.TextVisible = false;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -543,6 +694,18 @@
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1022, 551);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.pictureEdit1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(150, 150, 10, 10);
+            this.layoutControlItem1.Size = new System.Drawing.Size(423, 50);
+            this.layoutControlItem1.Text = "开始检测：";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 19);
             // 
             // layoutControlItem2
             // 
@@ -631,6 +794,15 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.pro_1;
+            this.layoutControlItem8.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(172, 46);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
             // layoutControlGroup4
             // 
             this.layoutControlGroup4.AppearanceGroup.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -653,9 +825,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(829, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(836, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(149, 46);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(142, 46);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem10
@@ -684,29 +856,38 @@
             this.layoutControlItem18.Location = new System.Drawing.Point(254, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem18.Size = new System.Drawing.Size(159, 46);
+            this.layoutControlItem18.Size = new System.Drawing.Size(156, 46);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.tog_3;
-            this.layoutControlItem22.Location = new System.Drawing.Point(583, 0);
+            this.layoutControlItem22.Location = new System.Drawing.Point(582, 0);
             this.layoutControlItem22.Name = "layoutControlItem22";
             this.layoutControlItem22.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem22.Size = new System.Drawing.Size(166, 46);
+            this.layoutControlItem22.Size = new System.Drawing.Size(173, 46);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.lbl_3;
-            this.layoutControlItem30.Location = new System.Drawing.Point(749, 0);
+            this.layoutControlItem30.Location = new System.Drawing.Point(755, 0);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem30.Size = new System.Drawing.Size(80, 46);
+            this.layoutControlItem30.Size = new System.Drawing.Size(81, 46);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.pro_3;
+            this.layoutControlItem26.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(172, 46);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextVisible = false;
             // 
             // layoutControlGroup5
             // 
@@ -730,9 +911,9 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(828, 0);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(836, 0);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(150, 46);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(142, 46);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
@@ -761,29 +942,38 @@
             this.layoutControlItem19.Location = new System.Drawing.Point(254, 0);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem19.Size = new System.Drawing.Size(159, 46);
+            this.layoutControlItem19.Size = new System.Drawing.Size(156, 46);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextVisible = false;
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.tog_4;
-            this.layoutControlItem23.Location = new System.Drawing.Point(583, 0);
+            this.layoutControlItem23.Location = new System.Drawing.Point(582, 0);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem23.Size = new System.Drawing.Size(165, 46);
+            this.layoutControlItem23.Size = new System.Drawing.Size(173, 46);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextVisible = false;
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.lbl_4;
-            this.layoutControlItem31.Location = new System.Drawing.Point(748, 0);
+            this.layoutControlItem31.Location = new System.Drawing.Point(755, 0);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem31.Size = new System.Drawing.Size(80, 46);
+            this.layoutControlItem31.Size = new System.Drawing.Size(81, 46);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
+            // 
+            // layoutControlItem27
+            // 
+            this.layoutControlItem27.Control = this.pro_4;
+            this.layoutControlItem27.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem27.Name = "layoutControlItem27";
+            this.layoutControlItem27.Size = new System.Drawing.Size(172, 46);
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem27.TextVisible = false;
             // 
             // layoutControlGroup6
             // 
@@ -807,9 +997,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(826, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(836, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(152, 46);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(142, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem12
@@ -838,29 +1028,38 @@
             this.layoutControlItem20.Location = new System.Drawing.Point(254, 0);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem20.Size = new System.Drawing.Size(159, 46);
+            this.layoutControlItem20.Size = new System.Drawing.Size(156, 46);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.tog_5;
-            this.layoutControlItem24.Location = new System.Drawing.Point(583, 0);
+            this.layoutControlItem24.Location = new System.Drawing.Point(582, 0);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem24.Size = new System.Drawing.Size(163, 46);
+            this.layoutControlItem24.Size = new System.Drawing.Size(173, 46);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
             // 
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.lbl_5;
-            this.layoutControlItem32.Location = new System.Drawing.Point(746, 0);
+            this.layoutControlItem32.Location = new System.Drawing.Point(755, 0);
             this.layoutControlItem32.Name = "layoutControlItem32";
             this.layoutControlItem32.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem32.Size = new System.Drawing.Size(80, 46);
+            this.layoutControlItem32.Size = new System.Drawing.Size(81, 46);
             this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem32.TextVisible = false;
+            // 
+            // layoutControlItem28
+            // 
+            this.layoutControlItem28.Control = this.pro_5;
+            this.layoutControlItem28.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem28.Name = "layoutControlItem28";
+            this.layoutControlItem28.Size = new System.Drawing.Size(172, 46);
+            this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem28.TextVisible = false;
             // 
             // layoutControlGroup3
             // 
@@ -884,9 +1083,9 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(832, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(834, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(146, 46);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(144, 46);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
@@ -894,15 +1093,15 @@
             this.layoutControlItem9.Control = this.labelControl3;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(116, 10, 10, 10);
-            this.layoutControlItem9.Size = new System.Drawing.Size(171, 46);
+            this.layoutControlItem9.Padding = new DevExpress.XtraLayout.Utils.Padding(115, 10, 10, 10);
+            this.layoutControlItem9.Size = new System.Drawing.Size(170, 46);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.hyperlinkLabelControl2;
-            this.layoutControlItem13.Location = new System.Drawing.Point(171, 0);
+            this.layoutControlItem13.Location = new System.Drawing.Point(170, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Padding = new DevExpress.XtraLayout.Utils.Padding(12, 12, 12, 12);
             this.layoutControlItem13.Size = new System.Drawing.Size(84, 46);
@@ -912,7 +1111,7 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.comboBoxEdit2;
-            this.layoutControlItem17.Location = new System.Drawing.Point(255, 0);
+            this.layoutControlItem17.Location = new System.Drawing.Point(254, 0);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
             this.layoutControlItem17.Size = new System.Drawing.Size(156, 46);
@@ -922,20 +1121,29 @@
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.tog_2;
-            this.layoutControlItem21.Location = new System.Drawing.Point(581, 0);
+            this.layoutControlItem21.Location = new System.Drawing.Point(580, 0);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem21.Size = new System.Drawing.Size(171, 46);
+            this.layoutControlItem21.Size = new System.Drawing.Size(173, 46);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
+            // 
+            // layoutControlItem25
+            // 
+            this.layoutControlItem25.Control = this.pro_2;
+            this.layoutControlItem25.Location = new System.Drawing.Point(410, 0);
+            this.layoutControlItem25.Name = "layoutControlItem25";
+            this.layoutControlItem25.Size = new System.Drawing.Size(170, 46);
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem25.TextVisible = false;
             // 
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.lbl_2;
-            this.layoutControlItem29.Location = new System.Drawing.Point(752, 0);
+            this.layoutControlItem29.Location = new System.Drawing.Point(753, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.layoutControlItem29.Size = new System.Drawing.Size(80, 46);
+            this.layoutControlItem29.Size = new System.Drawing.Size(81, 46);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem29.TextVisible = false;
             // 
@@ -947,210 +1155,6 @@
             this.emptySpaceItem6.Size = new System.Drawing.Size(1002, 36);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // progressBarControl1
-            // 
-            this.progressBarControl1.Location = new System.Drawing.Point(435, 182);
-            this.progressBarControl1.Name = "progressBarControl1";
-            this.progressBarControl1.Size = new System.Drawing.Size(50, 18);
-            this.progressBarControl1.StyleController = this.layoutControl1;
-            this.progressBarControl1.TabIndex = 39;
-            // 
-            // layoutControlItem33
-            // 
-            this.layoutControlItem33.Control = this.progressBarControl1;
-            this.layoutControlItem33.Location = new System.Drawing.Point(411, 0);
-            this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(54, 46);
-            this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem33.TextVisible = false;
-            // 
-            // pro_2
-            // 
-            this.pro_2.AnimationToTextDistance = 10;
-            this.pro_2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pro_2.Appearance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pro_2.Appearance.Options.UseBackColor = true;
-            this.pro_2.Appearance.Options.UseFont = true;
-            this.pro_2.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_2.AppearanceCaption.Options.UseFont = true;
-            this.pro_2.Caption = "正在检测...";
-            this.pro_2.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pro_2.Description = "";
-            this.pro_2.Location = new System.Drawing.Point(435, 182);
-            this.pro_2.MaximumSize = new System.Drawing.Size(166, 0);
-            this.pro_2.MinimumSize = new System.Drawing.Size(0, 40);
-            this.pro_2.Name = "pro_2";
-            this.pro_2.ShowDescription = false;
-            this.pro_2.Size = new System.Drawing.Size(166, 40);
-            this.pro_2.StyleController = this.layoutControl1;
-            this.pro_2.TabIndex = 40;
-            this.pro_2.Text = "progressPanel2";
-            this.pro_2.Visible = false;
-            this.pro_2.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
-            // 
-            // layoutControlItem25
-            // 
-            this.layoutControlItem25.Control = this.pro_2;
-            this.layoutControlItem25.Location = new System.Drawing.Point(411, 0);
-            this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(170, 46);
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem25.TextVisible = false;
-            // 
-            // pro_3
-            // 
-            this.pro_3.AnimationToTextDistance = 10;
-            this.pro_3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pro_3.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_3.Appearance.Options.UseBackColor = true;
-            this.pro_3.Appearance.Options.UseFont = true;
-            this.pro_3.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_3.AppearanceCaption.Options.UseFont = true;
-            this.pro_3.Caption = "正在检测...";
-            this.pro_3.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pro_3.Description = "";
-            this.pro_3.Location = new System.Drawing.Point(437, 271);
-            this.pro_3.MinimumSize = new System.Drawing.Size(0, 40);
-            this.pro_3.Name = "pro_3";
-            this.pro_3.ShowDescription = false;
-            this.pro_3.Size = new System.Drawing.Size(166, 40);
-            this.pro_3.StyleController = this.layoutControl1;
-            this.pro_3.TabIndex = 41;
-            this.pro_3.Text = "progressPanel3";
-            this.pro_3.Visible = false;
-            this.pro_3.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
-            // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.pro_3;
-            this.layoutControlItem26.Location = new System.Drawing.Point(413, 0);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(170, 46);
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem26.TextVisible = false;
-            // 
-            // pro_4
-            // 
-            this.pro_4.AnimationToTextDistance = 10;
-            this.pro_4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pro_4.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_4.Appearance.Options.UseBackColor = true;
-            this.pro_4.Appearance.Options.UseFont = true;
-            this.pro_4.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_4.AppearanceCaption.Options.UseFont = true;
-            this.pro_4.Caption = "正在检测...";
-            this.pro_4.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pro_4.Description = "";
-            this.pro_4.Location = new System.Drawing.Point(437, 360);
-            this.pro_4.MinimumSize = new System.Drawing.Size(0, 40);
-            this.pro_4.Name = "pro_4";
-            this.pro_4.ShowDescription = false;
-            this.pro_4.Size = new System.Drawing.Size(166, 40);
-            this.pro_4.StyleController = this.layoutControl1;
-            this.pro_4.TabIndex = 42;
-            this.pro_4.Text = "progressPanel4";
-            this.pro_4.Visible = false;
-            this.pro_4.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
-            // 
-            // layoutControlItem27
-            // 
-            this.layoutControlItem27.Control = this.pro_4;
-            this.layoutControlItem27.Location = new System.Drawing.Point(413, 0);
-            this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(170, 46);
-            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem27.TextVisible = false;
-            // 
-            // pro_5
-            // 
-            this.pro_5.AnimationToTextDistance = 10;
-            this.pro_5.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pro_5.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_5.Appearance.Options.UseBackColor = true;
-            this.pro_5.Appearance.Options.UseFont = true;
-            this.pro_5.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pro_5.AppearanceCaption.Options.UseFont = true;
-            this.pro_5.Caption = "正在检测...";
-            this.pro_5.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pro_5.Description = "";
-            this.pro_5.Location = new System.Drawing.Point(437, 449);
-            this.pro_5.MinimumSize = new System.Drawing.Size(0, 40);
-            this.pro_5.Name = "pro_5";
-            this.pro_5.ShowDescription = false;
-            this.pro_5.Size = new System.Drawing.Size(166, 40);
-            this.pro_5.StyleController = this.layoutControl1;
-            this.pro_5.TabIndex = 43;
-            this.pro_5.Text = "progressPanel5";
-            this.pro_5.Visible = false;
-            this.pro_5.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
-            // 
-            // layoutControlItem28
-            // 
-            this.layoutControlItem28.Control = this.pro_5;
-            this.layoutControlItem28.Location = new System.Drawing.Point(413, 0);
-            this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(170, 46);
-            this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem28.TextVisible = false;
-            // 
-            // pro_1
-            // 
-            this.pro_1.AnimationToTextDistance = 10;
-            this.pro_1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pro_1.Appearance.Options.UseBackColor = true;
-            this.pro_1.AppearanceCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pro_1.AppearanceCaption.Options.UseFont = true;
-            this.pro_1.Caption = "正在检测...";
-            this.pro_1.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pro_1.Location = new System.Drawing.Point(434, 93);
-            this.pro_1.MinimumSize = new System.Drawing.Size(0, 40);
-            this.pro_1.Name = "pro_1";
-            this.pro_1.ShowDescription = false;
-            this.pro_1.Size = new System.Drawing.Size(168, 40);
-            this.pro_1.StyleController = this.layoutControl1;
-            this.pro_1.TabIndex = 38;
-            this.pro_1.Text = "progressPanel1";
-            this.pro_1.Visible = false;
-            this.pro_1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = global::UltraANetT.Properties.Resources.start;
-            this.pictureEdit1.Location = new System.Drawing.Point(228, 20);
-            this.pictureEdit1.MaximumSize = new System.Drawing.Size(60, 30);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(55, 30);
-            this.pictureEdit1.StyleController = this.layoutControl1;
-            this.pictureEdit1.TabIndex = 4;
-            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
-            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.Control = this.pictureEdit1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(150, 150, 10, 10);
-            this.layoutControlItem1.Size = new System.Drawing.Size(423, 50);
-            this.layoutControlItem1.Text = "开始检测：";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 19);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.pro_1;
-            this.layoutControlItem8.Location = new System.Drawing.Point(410, 0);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(172, 46);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
             // HardwareCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1160,6 +1164,7 @@
             this.Size = new System.Drawing.Size(1022, 551);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_3.Properties)).EndInit();
@@ -1171,7 +1176,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tog_1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtResult.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
@@ -1180,6 +1188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -1187,6 +1196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
@@ -1194,6 +1204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
@@ -1201,23 +1212,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
