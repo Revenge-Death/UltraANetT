@@ -1,6 +1,6 @@
 ﻿namespace UltraANetT.Module
 {
-    partial class mod_Employee
+    partial class Employee
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mod_Employee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
             this.mailGroup = new DevExpress.XtraNavBar.NavBarGroup();
@@ -40,7 +40,7 @@
             this.rbDept = new System.Windows.Forms.RadioButton();
             this.imageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.pcContainer = new System.Windows.Forms.Panel();
-            this.empolyeeList1 = new UltraANetT.Control.EmpolyeeList();
+            this.empolyeeList1 = new UltraANetT.Control.gvEmployee();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -197,7 +197,6 @@
             this.empolyeeList1.Name = "empolyeeList1";
             this.empolyeeList1.Size = new System.Drawing.Size(855, 540);
             this.empolyeeList1.TabIndex = 0;
-            this.empolyeeList1.Load += new System.EventHandler(this.empolyeeList1_Load);
             // 
             // layoutControlGroup1
             // 
@@ -274,6 +273,6 @@
         private System.Windows.Forms.RadioButton rbRole;
         private System.Windows.Forms.RadioButton rbDept;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private Control.EmpolyeeList empolyeeList1;
+        private Control.gvEmployee empolyeeList1;
     }
 }

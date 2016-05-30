@@ -7,14 +7,14 @@ using UltraANetT.Form;
 
 namespace UltraANetT.Module
 {
-    public partial class mod_Employee : XtraUserControl
+    public partial class Employee : XtraUserControl
     {
         private XtraUserControl ContainerEm;
         private int flag;
 
         private bool isInit;
 
-        public mod_Employee()
+        public Employee()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace UltraANetT.Module
             {
                 pcContainer.Controls.Clear();
                 SplashScreenManager.ShowForm(typeof (wfMain), false, true);
-                var em = new EmpolyeeList();
+                var em = new gvEmployee();
                 em.Dock = DockStyle.Fill;
                 pcContainer.Controls.Add(em);
                 SplashScreenManager.CloseForm();
@@ -72,16 +72,6 @@ namespace UltraANetT.Module
             }
             else
                 isInit = true;
-        }
-
-        private void emList1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void empolyeeList1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

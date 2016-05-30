@@ -1,6 +1,6 @@
 ﻿namespace UltraANetT.Control
 {
-    partial class EmpolyeeList
+    partial class gvEmployee
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,7 +51,6 @@
             this.pictEm = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -74,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictEm.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -233,7 +231,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(672, 353);
+            this.labelControl2.Location = new System.Drawing.Point(672, 330);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 17);
             this.labelControl2.StyleController = this.layoutControl1;
@@ -242,51 +240,51 @@
             // 
             // memoEdit1
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(672, 374);
+            this.memoEdit1.Location = new System.Drawing.Point(672, 351);
             this.memoEdit1.MinimumSize = new System.Drawing.Size(0, 100);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(180, 165);
+            this.memoEdit1.Size = new System.Drawing.Size(180, 188);
             this.memoEdit1.StyleController = this.layoutControl1;
             this.memoEdit1.TabIndex = 11;
             // 
             // txtEmail
             // 
             this.txtEmail.EditValue = "517766627@qq.com";
-            this.txtEmail.Location = new System.Drawing.Point(735, 329);
+            this.txtEmail.Location = new System.Drawing.Point(711, 306);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(117, 20);
+            this.txtEmail.Size = new System.Drawing.Size(141, 20);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 10;
             // 
             // txtTel
             // 
             this.txtTel.EditValue = "15011238775";
-            this.txtTel.Location = new System.Drawing.Point(735, 305);
+            this.txtTel.Location = new System.Drawing.Point(711, 282);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(117, 20);
+            this.txtTel.Size = new System.Drawing.Size(141, 20);
             this.txtTel.StyleController = this.layoutControl1;
             this.txtTel.TabIndex = 9;
             // 
             // txtRole
             // 
-            this.txtRole.Location = new System.Drawing.Point(735, 281);
+            this.txtRole.Location = new System.Drawing.Point(711, 258);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(117, 20);
+            this.txtRole.Size = new System.Drawing.Size(141, 20);
             this.txtRole.StyleController = this.layoutControl1;
             this.txtRole.TabIndex = 8;
             // 
             // txtDept
             // 
-            this.txtDept.Location = new System.Drawing.Point(735, 257);
+            this.txtDept.Location = new System.Drawing.Point(711, 234);
             this.txtDept.Name = "txtDept";
-            this.txtDept.Size = new System.Drawing.Size(117, 20);
+            this.txtDept.Size = new System.Drawing.Size(141, 20);
             this.txtDept.StyleController = this.layoutControl1;
             this.txtDept.TabIndex = 7;
             // 
             // lblName
             // 
             this.lblName.Appearance.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(672, 233);
+            this.lblName.Location = new System.Drawing.Point(672, 210);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(45, 20);
             this.lblName.StyleController = this.layoutControl1;
@@ -318,7 +316,6 @@
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem6,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
@@ -334,14 +331,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(855, 540);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(669, 207);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(184, 23);
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.pictEm;
@@ -355,7 +344,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.lblName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(669, 230);
+            this.layoutControlItem3.Location = new System.Drawing.Point(669, 207);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(184, 24);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -366,59 +355,59 @@
             this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.txtDept;
-            this.layoutControlItem4.Location = new System.Drawing.Point(669, 254);
+            this.layoutControlItem4.Location = new System.Drawing.Point(669, 231);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(184, 24);
             this.layoutControlItem4.Text = "部门：";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(36, 17);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem5.Control = this.txtRole;
-            this.layoutControlItem5.Location = new System.Drawing.Point(669, 278);
+            this.layoutControlItem5.Location = new System.Drawing.Point(669, 255);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(184, 24);
             this.layoutControlItem5.Text = "角色：";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(36, 17);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem6.Control = this.txtTel;
-            this.layoutControlItem6.Location = new System.Drawing.Point(669, 302);
+            this.layoutControlItem6.Location = new System.Drawing.Point(669, 279);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(184, 24);
-            this.layoutControlItem6.Text = "联系方式：";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem6.Text = "电话：";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(36, 17);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.txtEmail;
-            this.layoutControlItem7.Location = new System.Drawing.Point(669, 326);
+            this.layoutControlItem7.Location = new System.Drawing.Point(669, 303);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(184, 24);
             this.layoutControlItem7.Text = "邮箱：";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 17);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(36, 17);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.memoEdit1;
-            this.layoutControlItem8.Location = new System.Drawing.Point(669, 371);
+            this.layoutControlItem8.Location = new System.Drawing.Point(669, 348);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 0);
-            this.layoutControlItem8.Size = new System.Drawing.Size(184, 167);
+            this.layoutControlItem8.Size = new System.Drawing.Size(184, 190);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.labelControl2;
-            this.layoutControlItem9.Location = new System.Drawing.Point(669, 350);
+            this.layoutControlItem9.Location = new System.Drawing.Point(669, 327);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(184, 21);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -441,14 +430,13 @@
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // EmpolyeeList
+            // gvEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "EmpolyeeList";
+            this.Name = "gvEmployee";
             this.Size = new System.Drawing.Size(855, 540);
-            this.Load += new System.EventHandler(this.EmTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
@@ -461,7 +449,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictEm.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -489,7 +476,6 @@
         private DevExpress.XtraEditors.LabelControl lblName;
         private DevExpress.XtraEditors.PictureEdit pictEm;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;

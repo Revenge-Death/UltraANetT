@@ -1,5 +1,4 @@
-﻿using System;
-using NHibernate;
+﻿using NHibernate;
 using NHibernate.Cfg;
 
 namespace DBEngine
@@ -10,22 +9,14 @@ namespace DBEngine
 
         private static ISessionFactory SessionFactory
         {
-
             get
             {
-                try
-                {
                     if (_sessionFactory != null) return _sessionFactory;
                     var configuration = new Configuration();
                     configuration.Configure();
                     configuration.AddAssembly(typeof(string).Assembly);
                     _sessionFactory = configuration.BuildSessionFactory();
                     return _sessionFactory;
-                }
-                catch (Exception e)
-                {
-                    throw;
-                }             
             }
         }
 

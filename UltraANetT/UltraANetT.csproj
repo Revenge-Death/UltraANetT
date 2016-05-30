@@ -52,10 +52,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DBEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DBEngine\bin\Debug\DBEngine.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -77,6 +73,8 @@
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DXCore.AssemblyResolver, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\DevExpress.DXCore.AssemblyResolver.dll</HintPath>
@@ -155,15 +153,18 @@
     <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -182,6 +183,8 @@
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -235,6 +238,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.dll</HintPath>
     </Reference>
+    <Reference Include="Model">
+      <HintPath>..\Model\bin\Debug\Model.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -269,11 +275,11 @@
     <Compile Include="Control\EmTable.Designer.cs">
       <DependentUpon>EmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\EmpolyeeList.cs">
+    <Compile Include="Control\gvEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\EmpolyeeList.Designer.cs">
-      <DependentUpon>EmpolyeeList.cs</DependentUpon>
+    <Compile Include="Control\gvEmployee.Designer.cs">
+      <DependentUpon>gvEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\UserInput.cs">
       <SubType>UserControl</SubType>
@@ -281,12 +287,13 @@
     <Compile Include="Control\UserInput.Designer.cs">
       <DependentUpon>UserInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalConst.cs" />
     <Compile Include="GolbalVar.cs" />
-    <Compile Include="Module\mod_Department.cs">
+    <Compile Include="Module\Department.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Module\mod_Department.Designer.cs">
-      <DependentUpon>mod_Department.cs</DependentUpon>
+    <Compile Include="Module\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\UserPwd.cs">
       <SubType>UserControl</SubType>
@@ -313,11 +320,11 @@
     <Compile Include="Module\Auto.Designer.cs">
       <DependentUpon>Auto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Module\mod_Employee.cs">
+    <Compile Include="Module\Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Module\mod_Employee.Designer.cs">
-      <DependentUpon>mod_Employee.cs</DependentUpon>
+    <Compile Include="Module\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\HardwareCheck.cs">
       <SubType>UserControl</SubType>
@@ -370,11 +377,6 @@
     <Compile Include="Form\LoadScreen.Designer.cs">
       <DependentUpon>LoadScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Form\wfMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,14 +389,14 @@
     <EmbeddedResource Include="Control\EmTable.resx">
       <DependentUpon>EmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\EmpolyeeList.resx">
-      <DependentUpon>EmpolyeeList.cs</DependentUpon>
+    <EmbeddedResource Include="Control\gvEmployee.resx">
+      <DependentUpon>gvEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\UserInput.resx">
       <DependentUpon>UserInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\mod_Department.resx">
-      <DependentUpon>mod_Department.cs</DependentUpon>
+    <EmbeddedResource Include="Module\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\UserPwd.resx">
       <DependentUpon>UserPwd.cs</DependentUpon>
@@ -408,8 +410,8 @@
     <EmbeddedResource Include="Module\Auto.resx">
       <DependentUpon>Auto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\mod_Employee.resx">
-      <DependentUpon>mod_Employee.cs</DependentUpon>
+    <EmbeddedResource Include="Module\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\HardwareCheck.resx">
       <DependentUpon>HardwareCheck.cs</DependentUpon>
@@ -444,16 +446,15 @@
     <EmbeddedResource Include="Form\wfMain.resx">
       <DependentUpon>wfMain.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="packages.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -478,22 +479,30 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Product.hbm.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="bin\Debug\Images\first.png" />
+    <None Include="bin\Debug\Images\Maual.png" />
+    <None Include="bin\Debug\Images\second.png" />
+    <None Include="bin\Debug\Images\third.png" />
+    <None Include="bin\Debug\Images\first_active.png" />
+    <None Include="bin\Debug\Images\first_hover.png" />
+    <None Include="bin\Debug\Images\fourth_active.png" />
+    <None Include="bin\Debug\Images\fourth_hover.png" />
+    <None Include="bin\Debug\Images\second_active.png" />
+    <None Include="bin\Debug\Images\second_hover.png" />
+    <None Include="bin\Debug\Images\third_active.png" />
+    <None Include="bin\Debug\Images\third_hover.png" />
     <Content Include="hibernate.cfg.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Iesi.Collections.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="xml\vehicelTree.xml">
       <SubType>Designer</SubType>
     </Content>
     <None Include="bin\Debug\Images\Config.png" />
-    <None Include="bin\Debug\Images\List.png" />
-    <None Include="bin\Debug\Images\节点列表.png" />
     <None Include="bin\Debug\Images\Stage.png" />
     <None Include="bin\Debug\Images\Vehicel.png" />
-    <None Include="bin\Debug\Images\user.png" />
-    <None Include="bin\Debug\Images\ready.png" />
     <Content Include="bin\Debug\DevExpress.BonusSkins.v15.2.dll" />
     <Content Include="bin\Debug\DevExpress.CodeRush.Common.dll" />
     <Content Include="bin\Debug\DevExpress.CodeRush.Common.xml" />
@@ -568,50 +577,10 @@
     <Content Include="bin\Debug\Images\15.png" />
     <Content Include="bin\Debug\Images\16.png" />
     <Content Include="bin\Debug\Images\17.png" />
-    <Content Include="bin\Debug\Images\Calendar_16x16.png" />
-    <Content Include="bin\Debug\Images\Drafts_16x16.png" />
-    <Content Include="bin\Debug\Images\error.png" />
     <Content Include="bin\Debug\Images\False.png" />
-    <Content Include="bin\Debug\Images\GridContacts.png" />
-    <Content Include="bin\Debug\Images\GridTasks.png" />
-    <Content Include="bin\Debug\Images\Inbox_16x16.png" />
-    <Content Include="bin\Debug\Images\ListByDate_32x32.png" />
-    <Content Include="bin\Debug\Images\List_32x32.png" />
-    <Content Include="bin\Debug\Images\Mail_16x16.png" />
-    <Content Include="bin\Debug\Images\NavigationBar_32x32.png" />
-    <Content Include="bin\Debug\Images\ok.png" />
-    <Content Include="bin\Debug\Images\Organizer_16x16.png" />
-    <Content Include="bin\Debug\Images\Outbox_16x16.png" />
     <Content Include="bin\Debug\Images\Pause.png" />
-    <Content Include="bin\Debug\Images\Ribbon_AlignCenter_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_AlignLeft_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_AlignRight_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Bold_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Close_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Close_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Content_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Content_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Exit_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Exit_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Find_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Find_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Info_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Info_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Italic_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_New_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_New_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Open_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Open_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_SaveAs_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_SaveAs_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Save_16x16.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Save_32x32.png" />
-    <Content Include="bin\Debug\Images\Ribbon_Underline_16x16.png" />
     <Content Include="bin\Debug\Images\Run.png" />
-    <Content Include="bin\Debug\Images\start.png" />
     <Content Include="bin\Debug\Images\Stop.png" />
-    <Content Include="bin\Debug\Images\Tasks_16x16.png" />
-    <Content Include="bin\Debug\Images\Trash_16x16.png" />
     <Content Include="bin\Debug\Images\True.png" />
     <Content Include="bin\Debug\Images\Wait.png" />
     <Content Include="bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll" />
@@ -627,6 +596,12 @@
     <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
     <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll" />
     <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProcessEngine\ProcessEngine.csproj">
+      <Project>{6dadfcef-2696-4295-89d1-8b66dbd9957a}</Project>
+      <Name>ProcessEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

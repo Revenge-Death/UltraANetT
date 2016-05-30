@@ -17,5 +17,6 @@
       Data Source=ANetT.db
     </property>
     <property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+    <mapping assembly="Model"/>
   </session-factory>
 </hibernate-configuration>

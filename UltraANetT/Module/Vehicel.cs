@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -9,9 +10,11 @@ using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Nodes;
+using ProcessEngine;
 using UltraANetT.Properties;
 
 namespace UltraANetT.Module
@@ -22,31 +25,28 @@ namespace UltraANetT.Module
         private readonly List<string> _rootNodes = new List<string>();
         private readonly List<List<string>> _secondaryNodes = new List<List<string>>();
         private readonly List<List<string>> _finalNodes = new List<List<string>>();
+        private readonly IProcBefShow _show = new ProcDB();
+        private IProcBefStore _store = new ProcDB();
         public Vehicel()
         {
           
             InitializeComponent();
+            BingEvent();
             DrawVehicelTree();
-            LoadTreeList(GolbalVar.XmlPath);
-            GetNodesList();
-            InitGrid();
+            LoadTreeListFromXml(GolbalVar.VehicelXmlPath);
+            //GetAllNodesByRank();
+            //InitGrid();
+            
         }
 
         private void InitGrid()
         {
-            ((RepositoryItemComboBox)gvVechiel.Columns["VehicelType"].ColumnEdit).SelectedValueChanged += VCCombox_SelectedIndexChanged;
-            ((RepositoryItemComboBox)gvVechiel.Columns["VehicelConfig"].ColumnEdit).SelectedValueChanged += VSCombox_SelectedIndexChanged;
-            var dt = new DataTable();
-            string[] colNames =
-            {
-                "VehicelType", "VehicelConfig", "VehicelStage", "CreatTime", "CreatPerson", "AuthorizeTo",
-                "FromDepartment", "AuthorizationTime", "AuthorizationDept"
-            };
-
-            for (var i = 0; i < colNames.Count(); i++)
-            {
-                dt.Columns.Add(new DataColumn(colNames[i], typeof (object)));
-            }
+            //((RepositoryItemComboBox)gvVechiel.Columns["VehicelType"].ColumnEdit).SelectedValueChanged += VCCombox_SelectedIndexChanged;
+            //((RepositoryItemComboBox)gvVechiel.Columns["VehicelConfig"].ColumnEdit).SelectedValueChanged += VSCombox_SelectedIndexChanged;
+            var coList = new List<string>();
+            foreach (GridColumn col in gvVechiel.Columns)
+                coList.Add(col.FieldName);
+            var dt = _show.GetDataTable(coList.ToArray(), EnumLibrary.EnumTable.Authorization);
             gcVechiel.DataSource = dt;
         }
 
@@ -55,87 +55,113 @@ namespace UltraANetT.Module
             var node = vehicelTree.CalcHitInfo(new Point(e.X, e.Y)).Node;
             switch (e.Button)
             {
-                    case MouseButtons.Left:     
-                    if(node == null) return;
-                    if (node.HasChildren)
+                case MouseButtons.Left:
+                    if (node == null) return;
+                    if (!node.HasChildren)
                     {
-                        gvVechiel.OptionsView.NewItemRowPosition = NewItemRowPosition.None;
+                        //GolbalVar.CurrentNodeNameList = GetCurrentAndParentNode(node);
                         return;
                     }
-                    IsShowNewItemByNode(node);
                     ResetAllCombox();
                     break;
-                    case MouseButtons.Right:
+                case MouseButtons.Right:
                     ShowCmsByNode(node);
                     break;
-            }         
-        }
-      
-        #region 新建功能
-        private void tsmiCreateVehicel_Click(object sender, EventArgs e)
-        {
-            var node = vehicelTree.AppendNode(new object[] { "New Vehicel" }, -1);
-            //node.StateImageIndex = 1;//暂时不要图片
-            vehicelTree.FocusedNode = node;
-            StartEdit();
-            SaveTreeList(GolbalVar.XmlPath);
+            }
         }
 
-        private void tsmiCreatTask_Click(object sender, EventArgs e)
-        {
-            if (vehicelTree.FocusedNode == null) return;
-            var node = vehicelTree.FocusedNode.Nodes.Add(new object[] { "New Task" });//可不可以初始化时增加图标
-            //node.StateImageIndex = 0;//暂时不要图片
-            vehicelTree.FocusedNode = node;
-            StartEdit();
-            SaveTreeList(GolbalVar.XmlPath);
-        }
-
-        private void tsmiCreateStage_Click(object sender, EventArgs e)
-        {
-            if (vehicelTree.FocusedNode == null) return;
-            var node = vehicelTree.FocusedNode.Nodes.Add(new object[] { "New Stage" });
-            //node.StateImageIndex = 2;//暂时不要图片
-            vehicelTree.FocusedNode = node;
-            StartEdit();
-            SaveTreeList(GolbalVar.XmlPath);
-        }
-        #endregion
-
-        #region 编辑功能
-        private void tsmiReNameVehicel_Click(object sender, EventArgs e)
-        {
-            StartEdit();
-        }
-
-        private void tsmiReNameTask_Click(object sender, EventArgs e)
-        {
-            StartEdit();
-        }
-
-        private void tsmiReNameStage_Click(object sender, EventArgs e)
-        {
-            StartEdit();
-        }
-        #endregion
-
+        
         private void vehicelTree_ShownEditor(object sender, EventArgs e)
         {
             vehicelTree.OptionsBehavior.Editable = false;
         }
 
-        #region 删除功能
-        private void tsmiDelVehicel_Click(object sender, EventArgs e)
+
+        private void VCCombox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedIndex = ((ComboBoxEdit)sender).SelectedIndex;
+            UpdateVcComboxByIndex(selectedIndex);//Vc = vehicel config
         }
 
-        private void tsmiDelTask_Click(object sender, EventArgs e)
+        private void VSCombox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedIndex = ((ComboBoxEdit)sender).SelectedIndex;
+            UpdateVsComboxByIndex(selectedIndex);//Vs = vehicel stage
         }
 
-        private void tsmiDelStage_Click(object sender, EventArgs e)
+        private void tsmiRefresh_Click(object sender, EventArgs e)
         {
+
         }
+
+        private void PanelMouse_Hover(object sender, EventArgs e)
+        {
+            var pl = sender as PanelControl;
+            if (pl == null) return;
+            if (pl == plFirst)
+                plFirst.ContentImage = Resources.first_hover;
+            else if (pl == plSecond)
+                plSecond.ContentImage = Resources.second_hover;
+            else if (pl == plThird)
+                plThird.ContentImage = Resources.third_hover;
+            else if (pl == plFour)
+                plFour.ContentImage = Resources.fourth_hover;
+        }
+        private void PanelMouse_Leave(object sender, EventArgs e)
+        {
+            var pl = sender as PanelControl;
+            if (pl == null) return;
+            if (pl == plFirst)
+                plFirst.ContentImage = Resources.first;
+            else if (pl == plSecond)
+                plSecond.ContentImage = Resources.second;
+            else if (pl == plThird)
+                plThird.ContentImage = Resources.third;
+            else if (pl == plFour)
+                plFour.ContentImage = Resources.fourth;
+        }
+
+        #region 新建事件
+
+        private void Create_Click(object sender, EventArgs e)
+        {
+            var tsmi = sender as ToolStripMenuItem;
+            TreeListNode node = null;
+            if (tsmi == tsmiCreateVehicel)
+            {
+                node = vehicelTree.FocusedNode.Nodes.Add(new object[] { "New Vehicel" });
+            }
+            else if (tsmi == tsmiCreatTask)
+            {
+                if (vehicelTree.FocusedNode == null) return;
+                node = vehicelTree.FocusedNode.Nodes.Add(new object[] { "New Task" });
+            }
+            else if (tsmi == tsmiCreateStage)
+            {
+                if (vehicelTree.FocusedNode == null) return;
+                node = vehicelTree.FocusedNode.Nodes.Add(new object[] { "New Stage" });
+            }
+            vehicelTree.FocusedNode = node;
+            StartEdit();
+            SaveTreeList(GolbalVar.VehicelXmlPath);
+        }
+
+        #endregion
+
+        #region 编辑事件
+        private void ReName_Click(object sender, EventArgs e)
+        {
+            StartEdit();
+        }
+        #endregion
+
+        #region 删除事件
+
+        private void Del_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region 使树节点可以编辑
@@ -194,32 +220,14 @@ namespace UltraANetT.Module
         /// <summary>
         /// 读取树节点
         /// </summary>
-        /// <param name="filePath"></param>
+        /// <param name="xmlPath"></param>
         /// <returns></returns>
-        private bool LoadTreeList(string filePath)
+        private bool LoadTreeListFromXml(string xmlPath)
         {
-            if (!File.Exists(filePath)) return false;
-            vehicelTree.ImportFromXml(AppDomain.CurrentDomain.BaseDirectory + filePath);
+            if (!File.Exists(xmlPath)) return false;
+            vehicelTree.ImportFromXml(AppDomain.CurrentDomain.BaseDirectory + xmlPath);
             return true;
         }
-        #endregion
-
-        #region 根据右侧树节点判断是否显示新增行按钮
-        /// <summary>
-        /// 根据右侧树节点判断是否显示新增行按钮
-        /// </summary>
-        /// <param name="node"></param>
-        private void IsShowNewItemByNode(TreeListNode node)
-        {
-            var level = node.Level;
-            switch (level)
-            {
-                case 2:
-                    gvVechiel.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
-                    break;
-            }
-        }
-
         #endregion
 
         #region 根据条件判断显示那个下拉菜单
@@ -247,41 +255,91 @@ namespace UltraANetT.Module
             }
         }
 
+        #endregion     
+
+        #region 绘制车型树颜色
+        /// <summary>
+        ///     绘制车型树，变更颜色
+        /// </summary>
+        private void DrawVehicelTree()
+        {
+            var controlColor = CommonSkins.GetSkin(UserLookAndFeel.Default).Colors.GetColor("Control");
+            vehicelTree.Appearance.Empty.BackColor = controlColor;
+            vehicelTree.Appearance.Row.BackColor = controlColor;
+        }
+        #endregion      
+
+        #region 重置所有combox集合
+        /// <summary>
+        /// 重置所有combox集合
+        /// </summary>
+        private void ResetAllCombox()
+        {
+         
+        }
+        #endregion
+
+        #region 根据索引更新车型配置集合
+
+        private void UpdateVcComboxByIndex(int index)
+        {
+            //if (cbVehicelStage.Enabled)
+            //    cbVehicelStage.Enabled = false;
+            //List<List<string>> copySecondaryNodes = new List<List<string>> {_secondaryNodes[index]};
+            //cbVehicelConfig.Items.Clear();
+            ////重新得到数据集合
+            //cbVehicelConfig.Items.AddRange(GetSecondaryNodesName(copySecondaryNodes));
+        }
+
+        #endregion
+
+        #region 根据索引更新车型阶段集合
+        private void UpdateVsComboxByIndex(int index)
+        {
+            //List<List<string>> copyFinalNodes = new List<List<string>> { _finalNodes[index] };
+            //cbVehicelConfig.Items.Clear();
+            ////重新得到数据集合
+            //cbVehicelStage.Items.AddRange(GetFinalNodesName(copyFinalNodes));
+        }
+
         #endregion
 
         #region 获得节点数组
-
-        private void GetNodesList()//考虑递归版本是否更好
+        /// <summary>
+        /// 
+        /// </summary>
+        private void GetAllNodesByRank()//考虑递归版本是否更好
         {
             var treeList = vehicelTree.Nodes.ToList();
-          
+
             for (var i = 0; i < treeList.Count; i++)//获得一级节点集合
             {
                 _rootNodes.Add(treeList[i].GetDisplayText("colName"));
-                List<string> secondaryNodesCache = new List<string>();
+                var secondaryNodesCache = new List<string>();
                 for (var j = 0; j < treeList[i].Nodes.Count; j++)//获得二级节点集合
                 {
                     secondaryNodesCache.Add(treeList[i].Nodes[j].GetDisplayText("colName"));
-                    List <string> finalNodeCache = new List<string>();
+                    var finalNodeCache = new List<string>();
                     for (var k = 0; k < treeList[i].Nodes[j].Nodes.Count; k++)//获得三级节点集合
                     {
                         finalNodeCache.Add(treeList[i].Nodes[j].Nodes[k].GetDisplayText("colName"));
                     }
                     _finalNodes.Add(finalNodeCache);
-                }     
-             _secondaryNodes.Add(secondaryNodesCache);        
-            }                      
+                }
+                _secondaryNodes.Add(secondaryNodesCache);
+            }
         }
 
         #endregion
 
         #region 获得当前节点及其父节点
+
         /// <summary>
         /// 获得当前节点及其父节点
         /// </summary>
         /// <param name="node">当前节点</param>
         /// <returns></returns>
-        private static List<string> GetParentNodes(TreeListNode node)
+        private static List<string> GetCurrentAndParentNode(TreeListNode node)
         {
             List<string> nodes = new List<string>
             {
@@ -322,84 +380,82 @@ namespace UltraANetT.Module
 
         #endregion
 
-        #region 绘制车型树
+        #region 提交数据
         /// <summary>
-        ///     绘制车型树，变更颜色
+        /// 提交数据
         /// </summary>
-        private void DrawVehicelTree()
+        private void Submit()
         {
-            var controlColor = CommonSkins.GetSkin(UserLookAndFeel.Default).Colors.GetColor("Control");
-            vehicelTree.Appearance.Empty.BackColor = controlColor;
-            vehicelTree.Appearance.Row.BackColor = controlColor;
         }
         #endregion
 
-
-        private void btSubmit_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-
-        private void VCCombox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedIndex = ((ComboBoxEdit)sender).SelectedIndex;
-            UpdateVcComboxByIndex(selectedIndex);//Vc = vehicel config
-        }
-
-        private void VSCombox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedIndex = ((ComboBoxEdit)sender).SelectedIndex;
-            UpdateVsComboxByIndex(selectedIndex);//Vs = vehicel stage
-        }
-
-        private void tsmiRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-        #region 重置所有combox集合
+        #region 从界面控件上获得数据
         /// <summary>
-        /// 重置所有combox集合
+        ///  从界面上获得数据集合
         /// </summary>
-        private void ResetAllCombox()
+        /// <returns></returns>
+        private Dictionary<string, object> GetData()
         {
-            //清空原有数据集合
-            cbVehicelConfig.Items.Clear();
-            cbVehicelType.Items.Clear();
-            cbVehicelStage.Items.Clear();
-            //重新得到数据集合
-            cbVehicelConfig.Items.AddRange(GetSecondaryNodesName(_secondaryNodes));
-            cbVehicelType.Items.AddRange(_rootNodes);
-            cbVehicelStage.Items.AddRange(GetFinalNodesName(_finalNodes));
-
-            cbVehicelConfig.Enabled = false;
-            cbVehicelStage.Enabled = false;
+            return null;
         }
         #endregion
 
-        #region 根据索引更新车型配置集合
-
-        private void UpdateVcComboxByIndex(int index)
+        #region 向界面控件上设置数据
+        private void SetData(DataRow selectedRow)
         {
-            if (cbVehicelStage.Enabled)
-                cbVehicelStage.Enabled = false;
-            List<List<string>> copySecondaryNodes = new List<List<string>> {_secondaryNodes[index]};
-            cbVehicelConfig.Items.Clear();
-            //重新得到数据集合
-            cbVehicelConfig.Items.AddRange(GetSecondaryNodesName(copySecondaryNodes));
+        }
+        #endregion
+
+        #region 初始化Dict
+        /// <summary>
+        /// 初始化Dict
+        /// </summary>
+        private void InitEmpDict()
+        {
+        }
+        #endregion
+
+        #region 绑定事件
+        private void BingEvent()
+        {
+            plFirst.MouseHover += PanelMouse_Hover; ;
+            plSecond.MouseHover += PanelMouse_Hover;
+            plThird.MouseHover += PanelMouse_Hover;
+            plFour.MouseHover += PanelMouse_Hover;
+
+            plFirst.MouseLeave += PanelMouse_Leave;
+            plSecond.MouseLeave += PanelMouse_Leave;
+            plThird.MouseLeave += PanelMouse_Leave;
+            plFour.MouseLeave += PanelMouse_Leave;
+
+            tsmiReNameStage.Click += ReName_Click;
+            tsmiReNameTask.Click += ReName_Click;
+            tsmiReNameVehicel.Click += ReName_Click;
+
+            tsmiDelStage.Click += Del_Click;
+            tsmiDelTask.Click += Del_Click;
+            tsmiDelVehicel.Click += Del_Click;
+
+            tsmiCreateVehicel.Click += Create_Click;
+            tsmiCreatTask.Click += Create_Click;
+            tsmiCreateStage.Click += Create_Click;
+
         }
 
         #endregion
 
-        #region 根据索引更新车型阶段集合
-        private void UpdateVsComboxByIndex(int index)
-        {
-            List<List<string>> copyFinalNodes = new List<List<string>> { _finalNodes[index] };
-            cbVehicelConfig.Items.Clear();
-            //重新得到数据集合
-            cbVehicelStage.Items.AddRange(GetFinalNodesName(copyFinalNodes));
-        }
-        #endregion
 
+        private void plSecond_Click(object sender, EventArgs e)
+        {
+            var process = new Process
+            {
+                StartInfo =
+                    {
+                        FileName = AppDomain.CurrentDomain.BaseDirectory + "FileEditor.exe",
+                        UseShellExecute = true
+                    }
+            };
+            process.Start();
+        }
     }
 }

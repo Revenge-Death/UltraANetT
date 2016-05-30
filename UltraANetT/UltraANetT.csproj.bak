@@ -32,7 +32,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -52,9 +52,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DBEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.BonusSkins.v15.2.dll</HintPath>
+      <HintPath>..\DBEngine\bin\Debug\DBEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.CodeRush.Common, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
@@ -71,9 +74,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\DevExpress.CodeRush.VSCore.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Data.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.DXCore.AssemblyResolver, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -132,81 +134,65 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\DevExpress.DXCore.Platform.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.IntelliRush.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.IntelliRush.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.IntelliRush.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.MailClient.Win.resources, Version=15.2.5.0, Culture=ar, processorArchitecture=x86">
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.MailClient.Win.resources.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Office.v15.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Pdf.v15.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Pdf.v15.2.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Printing.v15.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.RichEdit.v15.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Sparkline.v15.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.Utils.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraBars.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Extensions, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraCharts.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraCharts.v15.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraCharts.v15.2.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraEditors.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraGrid.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraLayout.v15.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraNavBar.v15.2.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraPrinting.v15.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLL\DevExpress.XtraTreeList.v15.2.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -254,7 +240,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -273,10 +258,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutDevCompanion.cs" />
-    <Compile Include="Contact.cs">
+    <Compile Include="Form\Contact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contact.Designer.cs">
+    <Compile Include="Form\Contact.Designer.cs">
       <DependentUpon>Contact.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\EmTable.cs">
@@ -285,11 +270,11 @@
     <Compile Include="Control\EmTable.Designer.cs">
       <DependentUpon>EmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\EmList.cs">
+    <Compile Include="Control\gvEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\EmList.Designer.cs">
-      <DependentUpon>EmList.cs</DependentUpon>
+    <Compile Include="Control\gvEmployee.Designer.cs">
+      <DependentUpon>gvEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\UserInput.cs">
       <SubType>UserControl</SubType>
@@ -297,6 +282,7 @@
     <Compile Include="Control\UserInput.Designer.cs">
       <DependentUpon>UserInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="GolbalVar.cs" />
     <Compile Include="Module\Department.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,14 +297,15 @@
     </Compile>
     <Compile Include="Control\VehicelTree.cs">
       <SubType>UserControl</SubType>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="Control\VehicelTree.Designer.cs">
       <DependentUpon>VehicelTree.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Form\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Form\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\Auto.cs">
@@ -327,11 +314,11 @@
     <Compile Include="Module\Auto.Designer.cs">
       <DependentUpon>Auto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Module\Employee.cs">
+    <Compile Include="Module\mod_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Module\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="Module\mod_Employee.Designer.cs">
+      <DependentUpon>mod_Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\HardwareCheck.cs">
       <SubType>UserControl</SubType>
@@ -371,33 +358,33 @@
     </Compile>
     <Compile Include="Module\Vehicel.cs">
       <SubType>UserControl</SubType>
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="Module\Vehicel.Designer.cs">
       <DependentUpon>Vehicel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LoadScreen.cs">
+    <Compile Include="Form\LoadScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoadScreen.Designer.cs">
+    <Compile Include="Form\LoadScreen.Designer.cs">
       <DependentUpon>LoadScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="wfMain.cs">
+    <Compile Include="Form\wfMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="wfMain.designer.cs">
+    <Compile Include="Form\wfMain.designer.cs">
       <DependentUpon>wfMain.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Contact.resx">
+    <EmbeddedResource Include="Form\Contact.resx">
       <DependentUpon>Contact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\EmTable.resx">
       <DependentUpon>EmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\EmList.resx">
-      <DependentUpon>EmList.cs</DependentUpon>
+    <EmbeddedResource Include="Control\gvEmployee.resx">
+      <DependentUpon>gvEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\UserInput.resx">
       <DependentUpon>UserInput.cs</DependentUpon>
@@ -411,14 +398,14 @@
     <EmbeddedResource Include="Control\VehicelTree.resx">
       <DependentUpon>VehicelTree.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Form\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\Auto.resx">
       <DependentUpon>Auto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="Module\mod_Employee.resx">
+      <DependentUpon>mod_Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\HardwareCheck.resx">
       <DependentUpon>HardwareCheck.cs</DependentUpon>
@@ -444,24 +431,24 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="LoadScreen.resx">
+    <EmbeddedResource Include="Form\LoadScreen.resx">
       <DependentUpon>LoadScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="wfMain.resx">
+    <EmbeddedResource Include="Form\wfMain.resx">
       <DependentUpon>wfMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -486,152 +473,172 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Calendar_16x16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Ribbon_Info_32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Pause.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Run.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Stop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tasks_16x16.png" />
+    <None Include="bin\Debug\Images\bodyStyle.png" />
+    <None Include="bin\Debug\Images\first.png" />
+    <None Include="bin\Debug\Images\Maual.png" />
+    <None Include="bin\Debug\Images\second.png" />
+    <None Include="bin\Debug\Images\third.png" />
+    <None Include="bin\Debug\Images\four.png" />
+    <None Include="bin\Debug\Images\first_active.png" />
+    <None Include="bin\Debug\Images\first_hover.png" />
+    <None Include="bin\Debug\Images\fourth_active.png" />
+    <None Include="bin\Debug\Images\fourth_hover.png" />
+    <None Include="bin\Debug\Images\second_active.png" />
+    <None Include="bin\Debug\Images\second_hover.png" />
+    <None Include="bin\Debug\Images\third_active.png" />
+    <None Include="bin\Debug\Images\third_hover.png" />
+    <Content Include="Iesi.Collections.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Product.hbm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml\vehicelTree.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="bin\Debug\Images\Config.png" />
+    <None Include="bin\Debug\Images\List.png" />
+    <None Include="bin\Debug\Images\节点列表.png" />
+    <None Include="bin\Debug\Images\Stage.png" />
+    <None Include="bin\Debug\Images\Vehicel.png" />
     <None Include="bin\Debug\Images\user.png" />
     <None Include="bin\Debug\Images\ready.png" />
-    <Content Include="DLL\DevExpress.BonusSkins.v15.2.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.Common.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.Common.xml" />
-    <Content Include="DLL\DevExpress.CodeRush.Core.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.Core.xml" />
-    <Content Include="DLL\DevExpress.CodeRush.Extensions.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.Extensions.xml" />
-    <Content Include="DLL\DevExpress.CodeRush.Interop.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.StructuralParser.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.StructuralParser.xml" />
-    <Content Include="DLL\DevExpress.CodeRush.VSCore.dll" />
-    <Content Include="DLL\DevExpress.CodeRush.VSCore.xml" />
-    <Content Include="DLL\DevExpress.Data.v15.2.dll" />
-    <Content Include="DLL\DevExpress.Data.v15.2.xml" />
-    <Content Include="DLL\DevExpress.DXCore.AssemblyResolver.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.Data.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.Utils.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.XtraBars.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.XtraEditors.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Controls.XtraTreeList.v6.3.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Decompiler.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Localization.dll" />
-    <Content Include="DLL\DevExpress.DXCore.MetaData.dll" />
-    <Content Include="DLL\DevExpress.DXCore.MetaData.xml" />
-    <Content Include="DLL\DevExpress.DXCore.Mvvm.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Mvvm.UI.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Parser.dll" />
-    <Content Include="DLL\DevExpress.DXCore.Parser.xml" />
-    <Content Include="DLL\DevExpress.DXCore.Platform.dll" />
-    <Content Include="DLL\DevExpress.IntelliRush.Core.dll" />
-    <Content Include="DLL\DevExpress.MailClient.Win.resources.dll" />
-    <Content Include="DLL\DevExpress.Office.v15.2.Core.dll" />
-    <Content Include="DLL\DevExpress.Office.v15.2.Core.xml" />
-    <Content Include="DLL\DevExpress.Pdf.v15.2.Core.dll" />
-    <Content Include="DLL\DevExpress.Pdf.v15.2.Core.xml" />
-    <Content Include="DLL\DevExpress.Pdf.v15.2.Drawing.dll" />
-    <Content Include="DLL\DevExpress.Pdf.v15.2.Drawing.xml" />
-    <Content Include="DLL\DevExpress.Printing.v15.2.Core.dll" />
-    <Content Include="DLL\DevExpress.Printing.v15.2.Core.xml" />
-    <Content Include="DLL\DevExpress.RichEdit.v15.2.Core.dll" />
-    <Content Include="DLL\DevExpress.RichEdit.v15.2.Core.xml" />
-    <Content Include="DLL\DevExpress.Sparkline.v15.2.Core.dll" />
-    <Content Include="DLL\DevExpress.Sparkline.v15.2.Core.xml" />
-    <Content Include="DLL\DevExpress.Utils.v15.2.dll" />
-    <Content Include="DLL\DevExpress.Utils.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraBars.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraBars.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraEditors.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraEditors.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraGrid.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraGrid.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraLayout.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraLayout.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraNavBar.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraNavBar.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraPrinting.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraPrinting.v15.2.xml" />
-    <Content Include="DLL\DevExpress.XtraTreeList.v15.2.dll" />
-    <Content Include="DLL\DevExpress.XtraTreeList.v15.2.xml" />
-    <Content Include="DLL\EnvDTE80.dll" />
-    <Content Include="DLL\EnvDTE80.xml" />
-    <Content Include="DLL\Extensibility.dll" />
-    <Content Include="DLL\Extensibility.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.Debugger.InteropA.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.OLE.Interop.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.OLE.Interop.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.10.0.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.8.0.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.Shell.Interop.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
-    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.dll" />
-    <Content Include="DLL\Microsoft.VisualStudio.TextManager.Interop.xml" />
-    <None Include="Images\11.png" />
-    <None Include="Images\12.png" />
-    <None Include="Images\13.png" />
-    <None Include="Images\14.png" />
-    <None Include="Images\15.png" />
-    <None Include="Images\16.png" />
-    <None Include="Images\17.png" />
-    <Content Include="Images\Drafts_16x16.png" />
-    <Content Include="Images\error.png" />
-    <Content Include="Images\False.png" />
-    <Content Include="Images\GridContacts.png" />
-    <Content Include="Images\GridTasks.png" />
-    <Content Include="Images\Inbox_16x16.png" />
-    <Content Include="Images\ListByDate_32x32.png" />
-    <Content Include="Images\List_32x32.png" />
-    <Content Include="Images\Mail_16x16.png" />
-    <Content Include="Images\NavigationBar_32x32.png" />
-    <Content Include="Images\ok.png" />
-    <Content Include="Images\Organizer_16x16.png" />
-    <Content Include="Images\Outbox_16x16.png" />
-    <Content Include="Images\ready.png" />
-    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
-    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
-    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
-    <Content Include="Images\Ribbon_Bold_16x16.png" />
-    <Content Include="Images\Ribbon_Close_16x16.png" />
-    <Content Include="Images\Ribbon_Close_32x32.png" />
-    <Content Include="Images\Ribbon_Content_16x16.png" />
-    <Content Include="Images\Ribbon_Content_32x32.png" />
-    <Content Include="Images\Ribbon_Exit_16x16.png" />
-    <Content Include="Images\Ribbon_Exit_32x32.png" />
-    <Content Include="Images\Ribbon_Find_16x16.png" />
-    <Content Include="Images\Ribbon_Find_32x32.png" />
-    <Content Include="Images\Ribbon_Info_16x16.png" />
-    <Content Include="Images\Ribbon_Italic_16x16.png" />
-    <Content Include="Images\Ribbon_New_16x16.png" />
-    <Content Include="Images\Ribbon_New_32x32.png" />
-    <Content Include="Images\Ribbon_Open_16x16.png" />
-    <Content Include="Images\Ribbon_Open_32x32.png" />
-    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
-    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
-    <Content Include="Images\Ribbon_Save_16x16.png" />
-    <Content Include="Images\Ribbon_Save_32x32.png" />
-    <Content Include="Images\Ribbon_Underline_16x16.png" />
-    <Content Include="Images\start.png" />
-    <Content Include="Images\Tasks_16x16.png" />
-    <Content Include="Images\Trash_16x16.png" />
-    <Content Include="Images\True.png" />
-    <Content Include="Images\user.png" />
-    <Content Include="Images\Wait.png" />
+    <Content Include="bin\Debug\DevExpress.BonusSkins.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Common.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Common.xml" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Extensions.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Extensions.xml" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.Interop.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.StructuralParser.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.StructuralParser.xml" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.VSCore.dll" />
+    <Content Include="bin\Debug\DevExpress.CodeRush.VSCore.xml" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.DXCore.AssemblyResolver.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.Data.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.Utils.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.XtraBars.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.XtraEditors.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Controls.XtraTreeList.v6.3.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Decompiler.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Localization.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.MetaData.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.MetaData.xml" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Mvvm.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Mvvm.UI.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Parser.dll" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Parser.xml" />
+    <Content Include="bin\Debug\DevExpress.DXCore.Platform.dll" />
+    <Content Include="bin\Debug\DevExpress.IntelliRush.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="bin\Debug\EnvDTE80.dll" />
+    <Content Include="bin\Debug\EnvDTE80.xml" />
+    <Content Include="bin\Debug\Extensibility.dll" />
+    <Content Include="bin\Debug\Extensibility.xml" />
+    <Content Include="bin\Debug\Images\11.png" />
+    <Content Include="bin\Debug\Images\12.png" />
+    <Content Include="bin\Debug\Images\13.png" />
+    <Content Include="bin\Debug\Images\14.png" />
+    <Content Include="bin\Debug\Images\15.png" />
+    <Content Include="bin\Debug\Images\16.png" />
+    <Content Include="bin\Debug\Images\17.png" />
+    <Content Include="bin\Debug\Images\Calendar_16x16.png" />
+    <Content Include="bin\Debug\Images\Drafts_16x16.png" />
+    <Content Include="bin\Debug\Images\error.png" />
+    <Content Include="bin\Debug\Images\False.png" />
+    <Content Include="bin\Debug\Images\GridContacts.png" />
+    <Content Include="bin\Debug\Images\GridTasks.png" />
+    <Content Include="bin\Debug\Images\Inbox_16x16.png" />
+    <Content Include="bin\Debug\Images\ListByDate_32x32.png" />
+    <Content Include="bin\Debug\Images\List_32x32.png" />
+    <Content Include="bin\Debug\Images\Mail_16x16.png" />
+    <Content Include="bin\Debug\Images\NavigationBar_32x32.png" />
+    <Content Include="bin\Debug\Images\ok.png" />
+    <Content Include="bin\Debug\Images\Organizer_16x16.png" />
+    <Content Include="bin\Debug\Images\Outbox_16x16.png" />
+    <Content Include="bin\Debug\Images\Pause.png" />
+    <Content Include="bin\Debug\Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Bold_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Close_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Close_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Content_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Content_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Exit_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Exit_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Find_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Find_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Info_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Info_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Italic_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_New_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_New_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Open_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Open_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Save_16x16.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Save_32x32.png" />
+    <Content Include="bin\Debug\Images\Ribbon_Underline_16x16.png" />
+    <Content Include="bin\Debug\Images\Run.png" />
+    <Content Include="bin\Debug\Images\start.png" />
+    <Content Include="bin\Debug\Images\Stop.png" />
+    <Content Include="bin\Debug\Images\Tasks_16x16.png" />
+    <Content Include="bin\Debug\Images\Trash_16x16.png" />
+    <Content Include="bin\Debug\Images\True.png" />
+    <Content Include="bin\Debug\Images\Wait.png" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.xml" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

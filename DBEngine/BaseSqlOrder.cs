@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NHibernate;
 using NHibernate.SqlCommand;
 
@@ -15,11 +16,11 @@ namespace DBEngine
         /// </summary>
         /// <param name="queryStr">指定查询条件</param>
         /// <returns>返回查询队形</returns>
-        public static IList<object[]> GetQuery(string queryStr)
+        public static IList<object[]> GetResultFromQuery(string queryStr)
         {
             using (var session = NHelper.OpenSession())
             {
-                IList<object[]> products = session
+                var products = session
                     .CreateSQLQuery(queryStr)
                     .List<object[]>();
                 session.Flush();
@@ -30,61 +31,95 @@ namespace DBEngine
         }
         #endregion
 
-        #region 添加指令
-        /// <summary>
-        /// 添加指令
-        /// </summary>
-        /// <param name="listProduct">被添加对象</param>
-        public static void Add(List<VehicelAuthorization> listProduct)
-        {
-            List<VehicelAuthorization> copyList = new List<VehicelAuthorization>();
-            copyList.AddRange(listProduct);
+        #region 添加信息
 
-            using (var session = NHelper.OpenSession())
-            using (var transaction = session.BeginTransaction())
+        /// <summary>
+        /// 添加信息
+        /// </summary>
+        /// <param name="info">添加信息</param>
+        /// <param name="error">异常信息</param>
+        public static bool Add(object info,out string error)
+        {
+            try
             {
-                foreach (var model in copyList)
+                using (var session = NHelper.OpenSession())
+                using (var transaction = session.BeginTransaction())
                 {
-                    session.Save(model);
+                    session.Save(info);
                     session.Flush();
                     session.Clear();
+                    transaction.Commit();
                 }
-                transaction.Commit();
+                error = "";
+                return true;
             }
+            catch (Exception ex)
+            {
+                error = ex.ToString();
+                return false;
+            }
+          
         }
         #endregion
 
         #region 删除指令
+
         /// <summary>
         /// 删除数据
         /// </summary>
         /// <param name="delStr">删除条件</param>
-        public void Del(string delStr)
+        /// <param name="error"></param>
+        public static bool Del(string delStr,out string error)
         {
-            using (var session = NHelper.OpenSession())
+            try
             {
-                session.CreateSQLQuery(delStr).ExecuteUpdate();
-                session.Flush();
-                session.Clear();
-                session.BeginTransaction().Commit();
+                using (var session = NHelper.OpenSession())
+                {
+                    session.CreateSQLQuery(delStr).ExecuteUpdate();
+                    session.Flush();
+                    session.Clear();
+                    session.BeginTransaction().Commit();
+                }
+                error = "";
+                return true;
             }
+            catch (Exception ex)
+            {
+                error = ex.ToString();
+                return false;
+            }
+           
         }
+
         #endregion
 
         #region 更新指令
+
         /// <summary>
         /// 删除数据
         /// </summary>
         /// <param name="updateStr">删除条件</param>
-        public void Update(string updateStr)
+        /// <param name="error"></param>
+        public static bool Update(string updateStr,out string error)
         {
-            using (var session = NHelper.OpenSession())
+            try
             {
-                session.CreateSQLQuery(updateStr).ExecuteUpdate();
-                session.Flush();
-                session.Clear();
-                session.BeginTransaction().Commit();
+                using (var session = NHelper.OpenSession())
+                {
+                    session.CreateSQLQuery(updateStr).ExecuteUpdate();
+                    session.Flush();
+                    session.Clear();
+                    session.BeginTransaction().Commit();
+                }
+                error = "";
+                return true;
             }
+            catch (Exception ex)
+            {
+                error = ex.ToString();
+                return false;
+            }
+            
         }
         #endregion
 
@@ -104,5 +139,20 @@ namespace DBEngine
         }
         #endregion
 
+        #region MyRegion
+        public static IList<object[]> GetRecord(string queryStr)
+        {
+            using (ISession session = NHelper.OpenSession())
+            {
+               var products = session
+                    .CreateSQLQuery(queryStr)
+                    .List<object[]>();
+                session.Flush();
+                session.Clear();
+                session.BeginTransaction().Commit();
+                return products;
+            }
+        }
+        #endregion
     }
 }

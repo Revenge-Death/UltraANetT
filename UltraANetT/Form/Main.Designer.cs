@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.iOpen = new DevExpress.XtraBars.BarButtonItem();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.gbtVehicel = new DevExpress.XtraBars.BarButtonItem();
             this.iClose = new DevExpress.XtraBars.BarButtonItem();
             this.gbtEmployee = new DevExpress.XtraBars.BarButtonItem();
@@ -67,7 +66,7 @@
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.gbtVehicelLog = new DevExpress.XtraBars.BarButtonItem();
             this.gbtPassword = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.pageSet = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageTest = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -84,9 +83,9 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageHelp = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.navbarImageCollection = new DevExpress.Utils.ImageCollection(this.components);
-            this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
-            this.DLAF = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.navbarImageCollection = new DevExpress.Utils.ImageCollection();
+            this.navbarImageCollectionLarge = new DevExpress.Utils.ImageCollection();
+            this.DLAF = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             this.pcMain = new DevExpress.XtraEditors.PanelControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -157,7 +156,7 @@
             this.pageLogs,
             this.pageHelp});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1022, 155);
+            this.ribbonControl.Size = new System.Drawing.Size(1022, 193);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ItemLinks.Add(this.gbtTask);
             // 
@@ -754,11 +753,11 @@
             this.ribbonStatusBar.ItemLinks.Add(this.siStatus);
             this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 706);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 699);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 21);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1022, 28);
             // 
             // navbarImageCollection
             // 
@@ -786,9 +785,9 @@
             // 
             this.pcMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pcMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcMain.Location = new System.Drawing.Point(0, 155);
+            this.pcMain.Location = new System.Drawing.Point(0, 193);
             this.pcMain.Name = "pcMain";
-            this.pcMain.Size = new System.Drawing.Size(1022, 551);
+            this.pcMain.Size = new System.Drawing.Size(1022, 506);
             this.pcMain.TabIndex = 4;
             // 
             // barButtonItem1
@@ -811,7 +810,7 @@
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 727);
             this.Controls.Add(this.pcMain);

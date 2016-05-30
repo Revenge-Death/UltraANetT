@@ -47,13 +47,10 @@
   <ItemGroup>
     <Compile Include="BaseSqlOrder.cs" />
     <Compile Include="ExcuteSqlCase.cs" />
-    <Compile Include="IStore.cs" />
-    <Compile Include="Model.cs" />
     <Compile Include="NHelper.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Store.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
