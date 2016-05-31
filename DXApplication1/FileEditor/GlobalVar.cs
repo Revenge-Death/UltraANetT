@@ -15,8 +15,10 @@ namespace FileEditor
 
         public static List<string> CANNameList = new List<string>();
 
-        public static List<Dictionary<string,string[]>> NodeList = new List<Dictionary<string, string[]>>();
+        public static List<Dictionary<string,string[]>>GetNodeFromDBC = new List<Dictionary<string, string[]>>();
 
+        public static Dictionary<string, List<Dictionary<string,List<Dictionary<string, string>>>>> NodeList = new Dictionary<string, List<Dictionary<string, List<Dictionary<string, string>>>>>();
 
+        public static Dictionary<string,byte[]> ByteCfgTemplate = new Dictionary<string, byte[]>();
     }
 }

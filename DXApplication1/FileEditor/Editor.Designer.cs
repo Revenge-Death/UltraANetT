@@ -29,34 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.officeNavigationBar1 = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.navEditor = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navCfg = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.navTemplete = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.navExample = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.DLAF = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.template = new FileEditor.Control.Template();
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navEditor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // officeNavigationBar1
+            // navEditor
             // 
-            this.officeNavigationBar1.AppearanceItem.Normal.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.officeNavigationBar1.AppearanceItem.Normal.Options.UseFont = true;
-            this.officeNavigationBar1.AutoSize = false;
-            this.officeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.officeNavigationBar1.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.navEditor.AppearanceItem.Normal.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.navEditor.AppearanceItem.Normal.Options.UseFont = true;
+            this.navEditor.AutoSize = false;
+            this.navEditor.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.navEditor.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.navEditor.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
             this.navCfg,
             this.navTemplete,
             this.navExample});
-            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 635);
-            this.officeNavigationBar1.Name = "officeNavigationBar1";
-            this.officeNavigationBar1.Size = new System.Drawing.Size(1006, 45);
-            this.officeNavigationBar1.TabIndex = 0;
-            this.officeNavigationBar1.Text = "officeNavigationBar1";
+            this.navEditor.Location = new System.Drawing.Point(0, 635);
+            this.navEditor.Name = "navEditor";
+            this.navEditor.Size = new System.Drawing.Size(1006, 45);
+            this.navEditor.TabIndex = 0;
+            this.navEditor.Text = "officeNavigationBar1";
+            this.navEditor.ItemClick += new DevExpress.XtraBars.Navigation.NavigationBarItemClickEventHandler(this.navEditor_ItemClick);
             // 
             // navCfg
             // 
@@ -101,13 +102,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 680);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.officeNavigationBar1);
+            this.Controls.Add(this.navEditor);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "Editor";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "文件配置编辑器";
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navEditor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -116,7 +117,7 @@
 
         #endregion
 
-        private DevExpress.XtraBars.Navigation.OfficeNavigationBar officeNavigationBar1;
+        private DevExpress.XtraBars.Navigation.OfficeNavigationBar navEditor;
         private DevExpress.XtraBars.Navigation.NavigationBarItem navCfg;
         private DevExpress.XtraBars.Navigation.NavigationBarItem navTemplete;
         private DevExpress.XtraBars.Navigation.NavigationBarItem navExample;

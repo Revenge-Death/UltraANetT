@@ -123,7 +123,7 @@
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.changeFontSizeItem1 = new DevExpress.XtraSpreadsheet.UI.ChangeFontSizeItem();
             this.repositoryItemSpreadsheetFontSizeEdit1 = new DevExpress.XtraSpreadsheet.Design.RepositoryItemSpreadsheetFontSizeEdit();
-            this.spreadsheetControl1 = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
+            this.ctlExcelConfig = new DevExpress.XtraSpreadsheet.SpreadsheetControl();
             this.spreadsheetCommandBarButtonItem5 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.spreadsheetCommandBarButtonItem6 = new DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandBarButtonItem();
             this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
@@ -271,6 +271,11 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.imageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.barButtonGroup11 = new DevExpress.XtraBars.BarButtonGroup();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.btnSubmit = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
@@ -632,9 +637,14 @@
             this.spreadsheetCommandBarButtonItem93,
             this.spreadsheetCommandBarButtonItem94,
             this.spreadsheetCommandBarButtonItem95,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.barToggleSwitchItem1,
+            this.barCheckItem1,
+            this.barButtonGroup11,
+            this.ribbonGalleryBarItem1,
+            this.btnSubmit});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 177;
+            this.ribbonControl1.MaxItemId = 7;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.homeRibbonPage1});
@@ -707,17 +717,17 @@
             this.repositoryItemSpreadsheetFontSizeEdit1.AutoHeight = false;
             this.repositoryItemSpreadsheetFontSizeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSpreadsheetFontSizeEdit1.Control = this.spreadsheetControl1;
+            this.repositoryItemSpreadsheetFontSizeEdit1.Control = this.ctlExcelConfig;
             this.repositoryItemSpreadsheetFontSizeEdit1.Name = "repositoryItemSpreadsheetFontSizeEdit1";
             // 
-            // spreadsheetControl1
+            // ctlExcelConfig
             // 
-            this.spreadsheetControl1.Location = new System.Drawing.Point(133, 6);
-            this.spreadsheetControl1.MenuManager = this.ribbonControl1;
-            this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(885, 437);
-            this.spreadsheetControl1.TabIndex = 4;
-            this.spreadsheetControl1.Text = "spreadsheetControl1";
+            this.ctlExcelConfig.Location = new System.Drawing.Point(133, 6);
+            this.ctlExcelConfig.MenuManager = this.ribbonControl1;
+            this.ctlExcelConfig.Name = "ctlExcelConfig";
+            this.ctlExcelConfig.Size = new System.Drawing.Size(885, 437);
+            this.ctlExcelConfig.TabIndex = 4;
+            this.ctlExcelConfig.Text = "spreadsheetControl1";
             // 
             // spreadsheetCommandBarButtonItem5
             // 
@@ -1919,6 +1929,7 @@
             // 
             this.ribbonPageGroup1.AllowMinimize = false;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSubmit);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Setting";
             // 
@@ -2081,12 +2092,12 @@
             this.excelConfig.BarItems.Add(this.spreadsheetCommandBarButtonItem93);
             this.excelConfig.BarItems.Add(this.spreadsheetCommandBarButtonItem94);
             this.excelConfig.BarItems.Add(this.spreadsheetCommandBarButtonItem95);
-            this.excelConfig.Control = this.spreadsheetControl1;
+            this.excelConfig.Control = this.ctlExcelConfig;
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.navBarControl2);
-            this.layoutControl1.Controls.Add(this.spreadsheetControl1);
+            this.layoutControl1.Controls.Add(this.ctlExcelConfig);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 181);
             this.layoutControl1.Name = "layoutControl1";
@@ -2132,7 +2143,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.spreadsheetControl1;
+            this.layoutControlItem1.Control = this.ctlExcelConfig;
             this.layoutControlItem1.Location = new System.Drawing.Point(127, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(891, 443);
@@ -2152,6 +2163,41 @@
             // 
             this.imageCollection.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection.ImageStream")));
             this.imageCollection.Images.SetKeyName(0, "Scan.png");
+            // 
+            // barToggleSwitchItem1
+            // 
+            this.barToggleSwitchItem1.Caption = "barToggleSwitchItem1";
+            this.barToggleSwitchItem1.Id = 1;
+            this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
+            // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.BindableChecked = true;
+            this.barCheckItem1.Caption = "CAN1";
+            this.barCheckItem1.Checked = true;
+            this.barCheckItem1.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
+            this.barCheckItem1.Id = 2;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // barButtonGroup11
+            // 
+            this.barButtonGroup11.Caption = "barButtonGroup11";
+            this.barButtonGroup11.Id = 4;
+            this.barButtonGroup11.Name = "barButtonGroup11";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 5;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Caption = "保存提交";
+            this.btnSubmit.Glyph = global::FileEditor.Properties.Resources.Scan;
+            this.btnSubmit.Id = 6;
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSubmit_ItemClick);
             // 
             // Template
             // 
@@ -2353,7 +2399,7 @@
         private DevExpress.XtraSpreadsheet.UI.CellsRibbonPageGroup cellsRibbonPageGroup1;
         private DevExpress.XtraSpreadsheet.UI.EditingRibbonPageGroup editingRibbonPageGroup1;
         private DevExpress.XtraSpreadsheet.UI.SpreadsheetBarController excelConfig;
-        private DevExpress.XtraSpreadsheet.SpreadsheetControl spreadsheetControl1;
+        private DevExpress.XtraSpreadsheet.SpreadsheetControl ctlExcelConfig;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -2363,5 +2409,10 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.Utils.ImageCollection imageCollection;
+        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup11;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem btnSubmit;
     }
 }
